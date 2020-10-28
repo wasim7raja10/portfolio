@@ -1,3 +1,19 @@
 body {
-    background-color: #eaffd0;
+  background-color: #eaffd0;
+}
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+p {
+    font-size: 20px;
+}
+
+td,th {
+    padding-right: 20px;
+}
+th {
+    text-align: left;
 }

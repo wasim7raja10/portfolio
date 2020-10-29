@@ -2,8 +2,8 @@ body {
   background-color: #f6f7d7;
 }
 img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
@@ -22,4 +22,7 @@ hr{
 }
 h1, h2, h3{
   color: rgb(80, 172, 226);
+}
+.name{
+  font-size: 30px;
 }

@@ -8,53 +8,68 @@
     <link rel="stylesheet" href="../style/styles.css" />
   </head>
   <body>
-    <!-- header -->
-    <nav>
-      <ol>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./projects.html">Projects</a></li>
-        <li><a href="./blogs.html">Blogs</a></li>
-      </ol>
-    </nav>
-
-    <main>
-      <h1>Personal Projects</h1>
-      <div>
-        
-        <div>
-          <h2>Are you a Harry Potter Fan?</h2>
-          <time datetime="2022-08-26">26, August, 2022</time>
-          <p>Do you know Hogwarts universe? Let's play a quiz and see.</p>
-          <div>
-            <a href="">Live Project</a>
-            <a href="">View Source</a>
-          </div>
-        </div>
-
-        <div>
-          <h2>How much do you know me?</h2>
-          <time datetime="2022-08-27">27, August, 2022</time>
-          <p>
-            A CLI app built with nodeJS. You can send this to your friends and
-            find out who really knows you.
-          </p>
-          <div>
-            <a href="">Live Project</a>
-            <a href="">View Source</a>
-          </div>
-        </div>
-
-      </div>
-    </main>
-
-     <!-- footer -->
-     <footer>
-        <h3>Connect with me here:</h3>
+    <div class="content">
+      <!-- header -->
+      <nav class="navlink">
         <ol>
-          <li><a href="">Github</a></li>
-          <li><a href="">Twitter</a></li>
-          <li><a href="">Linkedin</a></li>
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="./projects.html">Projects</a></li>
+          <li><a class="nav-link" href="./blogs.html">Blogs</a></li>
         </ol>
-      </footer>
+      </nav>
+
+      <main>
+        <h1>Personal Projects</h1>
+        <div>
+          <div class="project">
+            <h3>Are you a Harry Potter Fan?</h3>
+            <time datetime="2022-08-26">26, August, 2022</time>
+            <p>Do you know Hogwarts universe? Let's play a quiz and see.</p>
+            <div>
+              <a href="">Live Project</a>
+              <a href="">View Source</a>
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>How much do you know me?</h3>
+            <time datetime="2022-08-27">27, August, 2022</time>
+            <p>
+              A CLI app built with nodeJS. You can send this to your friends and
+              find out who really knows you.
+            </p>
+            <div>
+              <a href="">Live Project</a>
+              <a href="">View Source</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <ol>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/wasim-r-31857014b/"
+            ><img src="../icons/001-linkedin.png" alt="linkedin logo"
+          /></a>
+        </li>
+        <li>
+          <a target="_blank" href="https://twitter.com/wasim7raja10"
+            ><img src="../icons/002-twitter.png" alt="twitter logo"
+          /></a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/wasim7raja10"
+            ><img src="../icons/003-github.png" alt="github logo"
+          /></a>
+        </li>
+      </ol>
+    </footer>
+
+    <script src="../scripts/app.js"></script>
   </body>
 </html>

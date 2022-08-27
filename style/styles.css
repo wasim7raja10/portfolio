@@ -1,5 +1,8 @@
 body {
   background-color: #f6f7d7;
+  max-width: 672px;
+  padding: 0 32px;
+  margin: auto;
 }
 img {
   width: 150px;

@@ -3,34 +3,36 @@ import Base from "../layouts/Base.astro";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
-	(a, b) =>
-		new Date(b.frontmatter.pubDate).valueOf() -
-		new Date(a.frontmatter.pubDate).valueOf()
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
 );
 ---
 
 <Base>
-	<main class=" ">
-		<section>
-			<ul>
-				{
-					posts.map((post) => (
-						<li>
-							<time datetime={post.frontmatter.pubDate}>
-								{new Date(post.frontmatter.pubDate).toLocaleDateString(
-									"en-us",
-									{
-										year: "numeric",
-										month: "short",
-										day: "numeric",
-									}
-								)}
-							</time>
-							<a href={post.url}>{post.frontmatter.title}</a>
-						</li>
-					))
-				}
-			</ul>
-		</section>
-	</main>
+  <main class="">
+    <section>
+      <ul class="space-y-4">
+        {
+          posts.map((post) => (
+            <li>
+              <a href={post.url}>
+                <h3>{post.frontmatter.title}</h3>
+                <time class=" text-sm" datetime={post.frontmatter.pubDate}>
+                  {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                    "en-us",
+                    {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    }
+                  )}
+                </time>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
 </Base>

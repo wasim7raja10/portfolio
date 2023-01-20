@@ -5,13 +5,13 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
 
-<html lang='en'>
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class=" bg-zinc-900 text-neutral-400">
-		<Header title={SITE_TITLE} />
-		<main class=' min-h-[calc(100vh-64px-32px)] px-4 py-8'><slot /></main>
-		<Footer />
-	</body>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-zinc-900 text-neutral-400">
+    <Header title={SITE_TITLE} />
+    <main class="min-h-[calc(100vh-64px-32px)] px-4 py-8"><slot /></main>
+    <Footer />
+  </body>
 </html>

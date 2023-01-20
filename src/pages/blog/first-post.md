@@ -1,8 +1,8 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "First post"
-description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 08 2022"
+title: "Use Astro to build SEO good website"
+description: "Why Astro is the best framework for building website which needs good SEO and core web vitals to get traffic?"
+pubDate: "Jan 20, 2023"
 heroImage: "/placeholder-hero.jpg"
 ---
 

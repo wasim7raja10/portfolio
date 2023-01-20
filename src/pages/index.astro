@@ -2,60 +2,87 @@
 import Base from "../layouts/Base.astro";
 // Fetch last 3 blog posts
 const posts = (await Astro.glob("./blog/*.{md,mdx}"))
-	.sort(
-		(a, b) =>
-			new Date(b.frontmatter.pubDate).valueOf() -
-			new Date(a.frontmatter.pubDate).valueOf()
-	)
-	.slice(0, 3);
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  )
+  .slice(0, 3);
 ---
 
 <Base>
-	<div class='space-y-10'>
-		<!-- Introduction -->
-		<div class='space-y-6'>
-			<div class='flex gap-4 w-full items-center'>
-				<div class=''>
-					<img
-						class='w-24 h-24 rounded-full'
-						src='/images/prof_pic.webp'
-						alt='Wasim Raja'
-						height='100'
-						width='100'
-					/>
-				</div>
-				<div>
-					<h1 class='text-3xl mb-4 text-neutral-200 font-bold'>Wasim Raja</h1>
-					<p class='text-emerald-500 uppercase'>Software Engineer.</p>
-				</div>
-			</div>
-			<div class='space-y-2'>
-				<p>Hey, I am Wasim Raja, a Software Engineer.</p>
-				<p>
-					My passion lies in building Web and Mobile apps, Tools, and Backend
-					System.
-				</p>
-				<p>
-					Find me on <a
-						class="text-emerald-500 hover:underline underline-offset-4 after:content-['_↗'] ..."
-						href='https://twitter.com/wasim7raja10'
-						target='_blank'>Twitter</a
-					>,
-					<a
-						class="text-emerald-500 hover:underline underline-offset-4 after:content-['_↗'] ..."
-						href='https://www.linkedin.com/in/wasim-r-31857014b/'
-						target='_blank'>LinkedIn</a
-					>
-					,
-					<a
-						class="text-emerald-500 hover:underline underline-offset-4 after:content-['_↗'] ..."
-						href='https://github.com/wasim7raja10'
-						target='_blank'>Github</a
-					>
-				</p>
-			</div>
-		</div>
+  <div class="space-y-10">
+    <!-- Introduction -->
+    <div class="space-y-6">
+      <div class="flex gap-4 w-full items-center">
+        <div class="">
+          <img
+            class="w-24 h-24 rounded-full"
+            src="/images/prof_pic.webp"
+            alt="Wasim Raja"
+            height="100"
+            width="100"
+          />
+        </div>
+        <div>
+          <h1 class="text-3xl mb-4 text-neutral-200 font-bold">Wasim Raja</h1>
+          <p class="text-emerald-500 uppercase">Software Engineer</p>
+        </div>
+      </div>
+      <div class="space-y-2">
+        <p>Hey, I am Wasim Raja, a Software Engineer.</p>
+        <p>
+          My passion lies in building Web and Mobile apps, Tools, and Backend
+          System.
+        </p>
+        <p>
+          Find me on <a
+            class="text-emerald-500 hover:underline underline-offset-4 after:content-['_↗'] ..."
+            href="https://twitter.com/wasim7raja10"
+            target="_blank">Twitter</a
+          >,
+          <a
+            class="text-emerald-500 hover:underline underline-offset-4 after:content-['_↗'] ..."
+            href="https://www.linkedin.com/in/wasim-r-31857014b/"
+            target="_blank">LinkedIn</a
+          >,
+          <a
+            class="text-emerald-500 hover:underline underline-offset-4 after:content-['_↗'] ..."
+            href="https://github.com/wasim7raja10"
+            target="_blank">Github</a
+          >
+        </p>
+      </div>
+    </div>
 
-		
-	</div>
+    <!-- Blogs -->
+    <div class="space-y-6">
+      <h2 class="text-2xl tracking-widest text-zinc-400 font-extrabold">
+        Blogs
+      </h2>
+      <div>
+        <ul class="space-y-4">
+          {
+            posts.map((post) => (
+              <li>
+                <a href={post.url}>
+                  <h3>{post.frontmatter.title}</h3>
+                  <time class=" text-sm" datetime={post.frontmatter.pubDate}>
+                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                      "en-us",
+                      {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      }
+                    )}
+                  </time>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
 </Base>

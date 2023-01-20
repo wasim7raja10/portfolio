@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Third post"
-description: "Lorem ipsum dolor sit amet"
+title: "Improve your Problem Solving skill"
+description: "Why and How should you improve your problem solving skill?"
 pubDate: "Jul 15 2022"
 heroImage: "/placeholder-hero.jpg"
 ---

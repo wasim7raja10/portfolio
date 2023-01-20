@@ -5,60 +5,60 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 
 const links = [
-	{
-		href: "/",
-		text: "Home",
-	},
-	{
-		href: "/blog",
-		text: "Blog",
-	},
-	{
-		href: "/work",
-		text: "Work",
-	},
+  {
+    href: "/",
+    text: "Home",
+  },
+  {
+    href: "/blog",
+    text: "Blog",
+  },
+  {
+    href: "/work",
+    text: "Work",
+  },
 ];
 ---
 
 <header
-	class='bg-zinc-900/90 backdrop-blur-sm text-neutral-200 h-16 border-b border-zinc-800 border-transparent sticky top-0 px-4'
+  class="bg-zinc-900/90 shadow-sm shadow-black backdrop-blur-sm text-neutral-200 h-16 border-b border-zinc-800 border-transparent sticky top-0 px-4"
 >
-	<nav class='flex justify-between w-full h-full'>
-		<span class='flex gap-4'>
-			{
-				links.map((link) => (
-					<HeaderLink
-						href={link.href}
-						class={`${
-							currentPath === link.href.slice(1)
-								? " text-emerald-500 h-full flex items-center border-b border-emerald-500"
-								: " text-neutral-200 h-full flex items-center"
-						}`}
-					>
-						{link.text}
-					</HeaderLink>
-				))
-			}
-		</span>
-		<span class='flex gap-4 h-full items-center'>
-			<HeaderLink href='https://twitter.com/astrodotbuild' target='_blank'>
-				<img
-					height='24'
-					width='24'
-					class='w-6'
-					alt="Twitter"
-					src='https://img.icons8.com/color/48/null/twitter--v1.png'
-				/>
-			</HeaderLink>
-			<HeaderLink href='https://github.com/withastro/astro' target='_blank'>
-				<img
-					height='24'
-					width='24'
-					class='w-6'
-					alt="Github"
-					src='https://img.icons8.com/ios-glyphs/48/null/github.png'
-				/>
-			</HeaderLink>
-		</span>
-	</nav>
+  <nav class="flex justify-between w-full h-full">
+    <span class="flex gap-4">
+      {
+        links.map((link) => (
+          <HeaderLink
+            href={link.href}
+            class={`${
+              currentPath === link.href.slice(1)
+                ? " text-emerald-500 h-full flex items-center border-b border-emerald-500"
+                : " text-neutral-200 h-full flex items-center"
+            }`}
+          >
+            {link.text}
+          </HeaderLink>
+        ))
+      }
+    </span>
+    <span class="flex gap-4 h-full items-center">
+      <HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">
+        <img
+          height="24"
+          width="24"
+          class="w-6"
+          alt="Twitter"
+          src="https://img.icons8.com/color/48/null/twitter--v1.png"
+        />
+      </HeaderLink>
+      <HeaderLink href="https://github.com/withastro/astro" target="_blank">
+        <img
+          height="24"
+          width="24"
+          class="w-6"
+          alt="Github"
+          src="https://img.icons8.com/ios-glyphs/48/null/github.png"
+        />
+      </HeaderLink>
+    </span>
+  </nav>
 </header>

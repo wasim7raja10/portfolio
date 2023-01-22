@@ -4,7 +4,7 @@ const { post } = Astro.props;
 ---
 
 <a href={post.url}>
-  <h3>{post.frontmatter.title}</h3>
+  <h3 class="text-lg">{post.frontmatter.title}</h3>
   <div class="flex items-center gap-2">
     <Icon name="uit:calender" class="text-emerald-500" size="16" />
     <time class="text-sm" datetime={post.frontmatter.pubDate}>

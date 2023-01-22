@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon";
+import BlogCard from "../components/BlogCard.astro";
 import Base from "../layouts/Base.astro";
 // Fetch last 3 blog posts
 const posts = (await Astro.glob("./blog/*.{md,mdx}"))
@@ -65,19 +67,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
           {
             posts.map((post) => (
               <li>
-                <a href={post.url}>
-                  <h3>{post.frontmatter.title}</h3>
-                  <time class=" text-sm" datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
-                      "en-us",
-                      {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      }
-                    )}
-                  </time>
-                </a>
+                <BlogCard post={post} />
               </li>
             ))
           }

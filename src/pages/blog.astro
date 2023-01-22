@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon";
 import Base from "../layouts/Base.astro";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
@@ -18,16 +19,23 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
             <li>
               <a href={post.url}>
                 <h3>{post.frontmatter.title}</h3>
-                <time class=" text-sm" datetime={post.frontmatter.pubDate}>
-                  {new Date(post.frontmatter.pubDate).toLocaleDateString(
-                    "en-us",
-                    {
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
-                    }
-                  )}
-                </time>
+                <div class=" flex items-center gap-2">
+                  <Icon
+                    name="uit:calender"
+                    class=" text-emerald-500"
+                    size="16"
+                  />
+                  <time class=" text-sm" datetime={post.frontmatter.pubDate}>
+                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                      "en-us",
+                      {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      }
+                    )}
+                  </time>
+                </div>
               </a>
             </li>
           ))

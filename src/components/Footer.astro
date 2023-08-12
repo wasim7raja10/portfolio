@@ -1,0 +1,11 @@
+---
+const today = new Date();
+import { SITE_TITLE } from "../config";
+---
+
+<footer
+  class="text-md flex h-8 items-center justify-center font-thin text-neutral-600"
+>
+  &copy; {today.getFullYear()}
+  {SITE_TITLE}. All rights reserved.
+</footer>

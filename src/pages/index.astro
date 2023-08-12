@@ -1,0 +1,88 @@
+---
+import BlogCard from "../components/BlogCard.astro";
+import Base from "../layouts/Base.astro";
+// Fetch last 3 blog posts
+const posts = (await Astro.glob("./blog/*.{md,mdx}"))
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  )
+  .slice(0, 3);
+---
+
+<Base>
+  <div class="space-y-10">
+    <!-- Introduction -->
+    <div class="space-y-6">
+      <div class="flex w-full items-center gap-4">
+        <div class="">
+          <img
+            class="h-24 w-24 rounded-full"
+            src="/images/prof_pic.webp"
+            alt="Wasim Raja"
+            height="100"
+            width="100"
+          />
+        </div>
+        <div>
+          <h1 class="mb-4 text-3xl font-bold text-neutral-200">Wasim Raja</h1>
+          <p class="uppercase text-emerald-500">Software Engineer</p>
+        </div>
+      </div>
+      <div class="space-y-2">
+        <p>Hey, I am Wasim Raja, a Software Engineer.</p>
+        <p>
+          My passion lies in building Web and Mobile apps, Tools, and Backend
+          System.
+        </p>
+        <p>
+          Find me on <a
+            class="... text-emerald-500 underline-offset-4 after:content-['_↗'] hover:underline"
+            href="https://twitter.com/wasim7raja10"
+            target="_blank">Twitter</a
+          >,
+          <a
+            class="... text-emerald-500 underline-offset-4 after:content-['_↗'] hover:underline"
+            href="https://www.linkedin.com/in/wasim-r-31857014b/"
+            target="_blank">LinkedIn</a
+          >,
+          <a
+            class="... text-emerald-500 underline-offset-4 after:content-['_↗'] hover:underline"
+            href="https://github.com/wasim7raja10"
+            target="_blank">Github</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- Blogs -->
+    <div class="space-y-6">
+      <h2 class="text-2xl font-extrabold tracking-widest text-zinc-400">
+        Blogs
+      </h2>
+      <div>
+        <ul class="space-y-4">
+          {
+            posts.map((post) => (
+              <li>
+                <BlogCard post={post} />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <a
+        class="block text-center text-sm capitalize underline underline-offset-4"
+        href="/blog">Show all blogs</a
+      >
+    </div>
+
+    <!-- Projects -->
+    <div class="space-y-6">
+      <h2 class="text-2xl font-extrabold tracking-widest text-zinc-400">
+        Projects
+      </h2>
+    </div>
+  </div>
+</Base>

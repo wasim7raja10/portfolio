@@ -1,0 +1,54 @@
+---
+import { Icon } from "astro-icon";
+
+import HeaderLink from "./HeaderLink.astro";
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+
+const links = [
+  {
+    href: "/",
+    text: "Home",
+  },
+  {
+    href: "/blog",
+    text: "Blog",
+  },
+  {
+    href: "/work",
+    text: "Work",
+  },
+];
+---
+
+<header
+  class="sticky top-0 h-16 border-b border-zinc-800 border-transparent bg-zinc-900/90 text-neutral-200 shadow-sm shadow-black backdrop-blur-sm"
+>
+  <nav class="mx-auto flex h-full w-full max-w-prose justify-between px-4">
+    <span class="flex gap-4">
+      {
+        links.map((link) => (
+          <HeaderLink
+            href={link.href}
+            class={`${
+              currentPath === link.href.slice(1)
+                ? " flex h-full items-center border-b border-emerald-500 text-emerald-500"
+                : " flex h-full items-center text-neutral-200"
+            }`}
+          >
+            {link.text}
+          </HeaderLink>
+        ))
+      }
+    </span>
+    <span class="flex h-full items-center gap-4">
+      <HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">
+        <Icon class="" name="logos:twitter" size="24" />
+      </HeaderLink>
+      <HeaderLink href="https://github.com/withastro/astro" target="_blank">
+        <Icon name="mdi:github" size="24" />
+      </HeaderLink>
+    </span>
+  </nav>
+</header>

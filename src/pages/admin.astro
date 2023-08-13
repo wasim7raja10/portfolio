@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>Content Manager</title>
+  <link type="text/yaml" rel="cms-config-url" href="public/admin/config.yml">
   <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style is:inline>
+    [data-slate-editor] {
+      /* See https://github.com/netlify/netlify-cms/issues/5092 */
+      -webkit-user-modify: read-write !important;
+    }
+  </style>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script is:inline src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>
-
-<style scoped>
-  [data-slate-editor] {
-    /* See https://github.com/netlify/netlify-cms/issues/5092 */
-    -webkit-user-modify: read-write !important;
-  }
-</style>

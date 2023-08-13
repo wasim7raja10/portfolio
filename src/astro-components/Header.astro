@@ -22,20 +22,14 @@ const links = [
 ];
 ---
 
-<header
-  class=""
->
+<header class="">
   <nav class="flex">
     <span class="">
       {
         links.map((link) => (
           <HeaderLink
             href={link.href}
-            class={`${
-              currentPath === link.href.slice(1)
-                ? " "
-                : " "
-            }`}
+            class={`${currentPath === link.href.slice(1) ? " " : " "}`}
           >
             {link.text}
           </HeaderLink>

@@ -1,9 +1,0 @@
-{
-  "tailwindConfig": "./tailwind.config.cjs",
-  "plugins": [
-    "prettier-plugin-astro",
-    "prettier-plugin-organize-imports",
-    "prettier-plugin-tailwindcss"
-  ],
-  "pluginSearchDirs": false
-}

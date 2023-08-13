@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "tinacms dev -c 'astro dev'",
-    "start": "astro dev",
-    "build": "astro build",
+    "start": "tinacms build && astro dev",
+    "build": "tinacms build && astro build",
     "preview": "tinacms build && astro preview",
     "astro": "astro"
   },

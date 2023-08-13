@@ -7,7 +7,7 @@
     "dev": "tinacms dev -c 'astro dev'",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "tinacms build && astro preview",
     "astro": "astro"
   },
   "dependencies": {

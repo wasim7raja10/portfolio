@@ -36,11 +36,12 @@ collections:
     folder: 'src/data' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     extension: json
-    slug: '{{fields.name}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - label: Project
         name: project
         widget: list
+        title: string
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Summary', name: 'summary', widget: 'text' }

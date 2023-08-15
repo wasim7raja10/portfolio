@@ -1,6 +1,7 @@
 ---
-import BlogCard from "@/astro-components/BlogCard.astro";
+import Header from "@/astro-components/Header.astro";
 import Base from "../layouts/Base.astro";
+import { SITE_TITLE } from "../config";
 // Fetch last 3 blog posts
 const posts = (await Astro.glob("./blog/*.{md,mdx}"))
   .sort(
@@ -12,5 +13,15 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
 ---
 
 <Base>
-  
+  <div class="h-screen bg-gradient-to-b from-gradient-start to-gradient-end">
+    <div class="container">
+      <Header title={SITE_TITLE} />
+
+      <div class="flex h-[calc(100vh-52px)] flex-col justify-center">
+        <div>
+          <h1>hello</h1>
+        </div>
+      </div>
+    </div>
+  </div>
 </Base>

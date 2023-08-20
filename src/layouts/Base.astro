@@ -1,6 +1,5 @@
 ---
 import BaseHead from "@/astro-components/BaseHead.astro";
-import Header from "@/astro-components/Header.astro";
 import Footer from "@/astro-components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
@@ -10,8 +9,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="container">
-    <Header title={SITE_TITLE} />
+  <body class="">
     <main class="">
       <slot />
     </main>

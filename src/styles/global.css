@@ -7,6 +7,9 @@
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
 
+    --gradient-start: #BEDEEF; 
+    --gradient-end: rgba(190, 222, 239, 0.00) 100%;
+
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
 

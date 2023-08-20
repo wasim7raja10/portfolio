@@ -2,6 +2,7 @@
 import Header from "@/astro-components/Header.astro";
 import Base from "../layouts/Base.astro";
 import { SITE_TITLE } from "../config";
+import { Icon } from "astro-icon";
 // Fetch last 3 blog posts
 const posts = (await Astro.glob("./blog/*.{md,mdx}"))
   .sort(
@@ -13,15 +14,53 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
 ---
 
 <Base>
-  <div class="h-screen bg-gradient-to-b from-gradient-start to-gradient-end">
-    <div class="container">
+  <div class="h-screen bg-gradient-to-b from-main to-gradient-end">
+    <div class="container px-4 md:px-8">
       <Header title={SITE_TITLE} />
 
-      <div class="flex h-[calc(100vh-52px)] flex-col justify-center">
+      <div class="flex h-96 flex-col justify-center md:h-[50vh]">
         <div>
-          <h1>hello</h1>
+          <div>
+            <p class="text-sm">Hi, my name is</p>
+            <h1 class="font-mono text-3xl font-bold md:text-6xl pb-1">Wasim Raja</h1>
+            <p class="font-medium md:text-2xl">Front-end developer at clearcals</p>
+          </div>
+          <p class="py-6 font-medium max-w-[500px] md:text-xl">
+            I build accessible, inclusive products and digital experience for
+            web and mobile app.
+          </p>
+          <!-- social media -->
+          <div class="flex gap-3">
+            <div
+              class="icon grid h-8 w-8 place-content-center rounded-full bg-main"
+            >
+              <Icon name="mdi:email" size="24" />
+            </div>
+            <div
+              class="icon grid h-8 w-8 place-content-center rounded-full bg-main"
+            >
+              <Icon name="mdi:twitter" size="24" />
+            </div>
+            <div
+              class="icon grid h-8 w-8 place-content-center rounded-full bg-main"
+            >
+              <Icon name="mdi:github" size="24" />
+            </div>
+            <div
+              class="icon grid h-8 w-8 place-content-center rounded-full bg-main"
+            >
+              <Icon name="mdi:linkedin" size="24" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </Base>
+
+<style scoped>
+  .icon {
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+      0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  }
+</style>

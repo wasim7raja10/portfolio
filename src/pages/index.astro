@@ -3,9 +3,9 @@ import Header from "@/astro-components/Header.astro";
 import Base from "../layouts/Base.astro";
 import { SITE_TITLE } from "../config";
 import Hero from "@/astro-components/Hero.astro";
-import Experience from "@/astro-components/Experience.astro"
-import Project from "@/astro-components/Project.astro"
-import BlogSection from "@/astro-components/BlogSection.astro"
+import Experience from "@/astro-components/Experience.astro";
+import Project from "@/astro-components/Project.astro";
+import BlogSection from "@/astro-components/BlogSection.astro";
 
 // Fetch last 3 blog posts
 const posts = (await Astro.glob("./blog/*.{md,mdx}"))
@@ -18,7 +18,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
 ---
 
 <Base>
-  <div class="h-screen bg-gradient-to-b from-main to-gradient-end">
+  <div class="bg-gradient-to-b from-main to-gradient-end">
     <div class="container px-4 md:px-8">
       <Header title={SITE_TITLE} />
 
@@ -32,5 +32,3 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
     </div>
   </div>
 </Base>
-
-

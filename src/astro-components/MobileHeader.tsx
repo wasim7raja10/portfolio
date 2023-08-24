@@ -3,13 +3,12 @@ import {
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import styles from "./MobileHeader.module.css";
 import { Button } from "@/components/ui/button";
 
-import links from "../data/links";
+import { links } from "@/shared/data";
 
 const MobileHeader = () => {
   return (

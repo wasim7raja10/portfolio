@@ -1,1 +1,12 @@
-{}
+{
+  "experiences": [
+    {
+      "role": "fsdf",
+      "company": "sdffs",
+      "startDate": "2023-08-07T18:30:00.000Z",
+      "endDate": "2023-08-10T18:30:00.000Z",
+      "description": ["fsdf", "fsdf"],
+      "skills": ["fsdf", "sdff", "sdfs"]
+    }
+  ]
+}

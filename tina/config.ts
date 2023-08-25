@@ -50,7 +50,7 @@ export default defineConfig({
       {
         label: "Projects",
         name: "projects",
-        path: "src/shared/data/projects",
+        path: "src/shared/data",
         ui: {
           allowedActions: {
             delete: false,
@@ -67,7 +67,6 @@ export default defineConfig({
             name: "projects",
             type: "object",
             list: true,
-            indexed: true,
             ui: {
               itemProps: (item) => {
                 // Field values are accessed by item?.<Field name>
@@ -124,7 +123,7 @@ export default defineConfig({
       {
         label: "Experiences",
         name: "experiences",
-        path: "src/shared/data/experiences",
+        path: "src/shared/data",
         ui: {
           allowedActions: {
             delete: false,
@@ -141,7 +140,6 @@ export default defineConfig({
             name: "experiences",
             type: "object",
             list: true,
-            indexed: true,
             ui: {
               itemProps: (item) => {
                 // Field values are accessed by item?.<Field name>

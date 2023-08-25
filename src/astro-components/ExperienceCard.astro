@@ -1,0 +1,27 @@
+---
+import { Experience } from "@/shared/model";
+import { formatDateToMonthYear } from "@/lib/utils";
+
+type Props = { data: Experience };
+const { data } = Astro.props;
+---
+
+<div class="flex gap-10 py-5">
+  <!-- date -->
+  <div>
+    <time datetime={formatDateToMonthYear(data.startDate)}>
+      {formatDateToMonthYear(data.startDate)}
+    </time> -
+    <time datetime={formatDateToMonthYear(data.endDate)}>
+      {formatDateToMonthYear(data.endDate)}
+    </time>
+  </div>
+  <!-- content -->
+  <div class="">
+    <div class="flex">
+      <h3>{data.role}</h3> &nbsp; - &nbsp <h3>{data.company}</h3>
+    </div>
+    <ul>{data.description.map((item) => <li>{item}</li>)}</ul>
+    <ul class="flex gap-2">{data.skills.map((item) => <li>{item}</li>)}</ul>
+  </div>
+</div>

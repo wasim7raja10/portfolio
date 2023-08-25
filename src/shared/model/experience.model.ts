@@ -1,6 +1,6 @@
 export default interface Experience {
-  startDate: string;
-  endDate: string;
+  startDate: Date;
+  endDate: Date;
   role: string;
   company: string;
   skills: string[];

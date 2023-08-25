@@ -1,4 +1,6 @@
-const links = [
+import { Link } from "../model";
+
+const links: Link[] = [
   {
     href: "/",
     text: "Home",

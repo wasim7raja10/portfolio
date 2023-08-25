@@ -1,7 +1,16 @@
 ---
-
+// Fetch last 3 blog posts
+const posts = (await Astro.glob("../pages/blog/*.{md,mdx}"))
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  )
+  .slice(0, 3);
 ---
 
-<section>
-    <h2>Blogs</h2>
+<section class="space-y-12 py-24">
+  <h2 class="text-5xl font-bold">Blogs</h2>
+
+  <div class="space-y-4"></div>
 </section>

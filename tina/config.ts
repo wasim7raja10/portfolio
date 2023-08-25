@@ -50,7 +50,7 @@ export default defineConfig({
       {
         label: "Projects",
         name: "projects",
-        path: "src/shared/data",
+        path: "src/shared/data/projects",
         ui: {
           allowedActions: {
             delete: false,
@@ -124,7 +124,7 @@ export default defineConfig({
       {
         label: "Experiences",
         name: "experiences",
-        path: "src/shared/data",
+        path: "src/shared/data/experiences",
         ui: {
           allowedActions: {
             delete: false,

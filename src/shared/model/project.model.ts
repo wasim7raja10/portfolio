@@ -4,7 +4,7 @@ export default interface Project {
   endDate: Date;
   description: string[];
   skills: string[];
-  imageUrl?: string;
+  image?: string;
   liveUrl?: string;
   githubUrl?: string;
 }

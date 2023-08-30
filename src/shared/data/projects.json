@@ -3,29 +3,52 @@
     {
       "name": "Portfolio",
       "image": "/images/projects/portfolio.png",
-      "startDate": "2023-06-30T18:30:00.000Z",
+      "startDate": "2023-07-31T18:30:00.000Z",
       "endDate": "2023-08-30T18:30:00.000Z",
       "description": [
         "sdgsg fdg gfdsg",
         "fsdg  sfdgfs sdfg"
       ],
       "skills": [
-        "df",
-        "dfgdfh",
-        "dfgfdh"
+        "shadcn/ui",
+        "Astro",
+        "Tailwind",
+        "Tina CMS"
       ],
-      "liveUrl": "sdfsdf",
-      "githubUrl": "sdfsdg"
+      "liveUrl": "https://wasimraja.netlify.app",
+      "githubUrl": "https://github.com/wasim7raja10/portfolio"
     },
     {
-      "name": "ANOTHER",
+      "name": "My Read",
+      "startDate": "2022-11-06T18:30:00.000Z",
+      "endDate": "2022-12-02T18:30:00.000Z",
+      "description": [
+        "Check book information.",
+        "Add book from book database to the tracking list."
+      ],
+      "skills": [
+        "CSS",
+        "React"
+      ],
+      "liveUrl": "https://readtrack.netlify.app/",
+      "githubUrl": "https://github.com/wasim7raja10/nd0191-c1-myreads"
+    },
+    {
+      "name": "CodeChef BCET Chapter Wep App",
+      "image": "/images/projects/codechefbcetchapter.png",
       "startDate": "2023-07-31T18:30:00.000Z",
       "endDate": "2023-08-30T18:30:00.000Z",
-      "liveUrl": "asd",
-      "githubUrl": "sad"
-    },
-    {
-      "name": "ABC"
+      "description": [
+        "Students can participate in events.",
+        "Aim of this web app was to help students find Resources, Events, etc."
+      ],
+      "skills": [
+        "Tailwind",
+        "React",
+        "Firebase"
+      ],
+      "liveUrl": "https://codechefbcetchapter.netlify.app/",
+      "githubUrl": "https://github.com/CodeChef-BCET-Chapter/ccbcet-website"
     }
   ]
 }

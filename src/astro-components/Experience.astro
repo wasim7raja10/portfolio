@@ -1,13 +1,13 @@
 ---
 import ExperienceCard from "./ExperienceCard.astro";
 
-import ExperienceData from "@/shared/data/experience.data";
+import { experienceData } from "@/shared/data";
 ---
 
 <section class="space-y-12 py-24">
   <h2 class="text-5xl font-bold">Experiences</h2>
 
   <div class="space-y-4">
-    {ExperienceData.map((item) => <ExperienceCard data={item} />)}
+    {experienceData.experiences.map((item) => <ExperienceCard data={item} />)}
   </div>
 </section>

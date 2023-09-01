@@ -1,6 +1,5 @@
 ---
 import { Experience } from "@/shared/model";
-import { formatDateToMonthYear } from "@/lib/utils";
 
 type Props = { data: Experience };
 const { data } = Astro.props;
@@ -9,11 +8,11 @@ const { data } = Astro.props;
 <div class="flex gap-10 py-5">
   <!-- date -->
   <div>
-    <time datetime={formatDateToMonthYear(data.startDate)}>
-      {formatDateToMonthYear(data.startDate)}
+    <time datetime={data.startDate}>
+      {data.startDate}
     </time> -
-    <time datetime={formatDateToMonthYear(data.endDate)}>
-      {formatDateToMonthYear(data.endDate)}
+    <time datetime={data.endDate}>
+      {data.endDate}
     </time>
   </div>
   <!-- content -->

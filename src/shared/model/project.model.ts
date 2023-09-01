@@ -1,10 +1,3 @@
-export default interface Project {
-  name: string;
-  startDate: Date;
-  endDate: Date;
-  description: string[];
-  skills: string[];
-  image?: string;
-  liveUrl?: string;
-  githubUrl?: string;
-}
+import { projectData } from "../data";
+
+export type Project = (typeof projectData.projects)[0];

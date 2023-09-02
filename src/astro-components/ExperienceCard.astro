@@ -1,5 +1,7 @@
 ---
 import { Experience } from "@/shared/model";
+import { formatDate } from "@/lib/utils";
+import { Icon } from "astro-icon";
 
 type Props = { data: Experience };
 const { data } = Astro.props;
@@ -7,20 +9,35 @@ const { data } = Astro.props;
 
 <div class="flex gap-10 py-5">
   <!-- date -->
-  <div>
+  <div class="w-48 text-xl">
     <time datetime={data.startDate}>
-      {data.startDate}
+      {formatDate(data.startDate)}
     </time> -
     <time datetime={data.endDate}>
-      {data.endDate}
+      {formatDate(data.endDate)}
     </time>
   </div>
   <!-- content -->
-  <div class="">
-    <div class="flex">
-      <h3>{data.role}</h3> &nbsp; - &nbsp <h3>{data.company}</h3>
+  <div class="max-w-xl space-y-4">
+    <div class="flex text-2xl font-semibold">
+      <h3>{data.role}</h3> &nbsp; - &nbsp; <h3>{data.company}</h3>
     </div>
-    <ul>{data.description.map((item) => <li>{item}</li>)}</ul>
-    <ul class="flex gap-2">{data.skills.map((item) => <li>{item}</li>)}</ul>
+    <ul class="text-lg">
+      {
+        data.description.map((item) => (
+          <li class="flex items-start gap-2">
+            <Icon class="mt-1" name="mdi:star" size="18" />
+            <span>{item}</span>
+          </li>
+        ))
+      }
+    </ul>
+    <ul class="flex gap-2">
+      {
+        data.skills.map((item) => (
+          <li class="bg-main rounded-3xl px-3 py-1">{item}</li>
+        ))
+      }
+    </ul>
   </div>
 </div>

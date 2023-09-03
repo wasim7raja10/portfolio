@@ -1,0 +1,47 @@
+---
+import { Project } from "@/shared/model";
+import { formatDate } from "@/lib/utils";
+import { Icon } from "astro-icon";
+
+type Props = { data: Project };
+const { data } = Astro.props;
+---
+
+<div class="flex gap-12 py-5">
+  <!-- image -->
+  <div class="grid min-h-max place-content-center">
+    <img
+      src={data.image}
+      alt={data.image}
+      loading="lazy"
+      width="320"
+      height="160"
+      class="h-40 w-80 rounded-xl"
+    />
+  </div>
+
+  <!-- data -->
+  <div class="space-y-4">
+    <div>
+      <div class="w-48 text-xs">
+        <time datetime={data.startDate}>
+          {formatDate(data.startDate)}
+        </time> -
+        <time datetime={data.endDate}>
+          {formatDate(data.endDate)}
+        </time>
+      </div>
+      <h3 class="text-2xl font-semibold">{data.name}</h3>
+    </div>
+    <ul class="text-lg list-disc list-inside">
+      {data.description.map((item) => <li>{item}</li>)}
+    </ul>
+    <ul class="flex gap-2">
+      {
+        data.skills.map((item) => (
+          <li class="bg-main rounded-3xl px-3 py-1">{item}</li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

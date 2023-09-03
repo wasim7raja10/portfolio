@@ -1,10 +1,13 @@
 ---
+import ProjectCard from "./ProjectCard.astro";
 
+import { projectData } from "@/shared/data";
 ---
 
 <section class="space-y-12 py-24">
   <h2 class="text-5xl font-bold">Projects</h2>
 
   <div class="space-y-4">
+    {projectData.projects.map((item) => <ProjectCard data={item} />)}
   </div>
 </section>

@@ -8179,8 +8179,8 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  /crypto-js@4.1.1:
-    resolution: {integrity: sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==}
+  /crypto-js@4.2.0:
+    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
     dev: false
 
   /css-box-model@1.2.1:
@@ -13664,7 +13664,7 @@ packages:
       '@udecode/plate-headless': 21.5.0(@babel/core@7.22.10)(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@17.0.2)(react@17.0.2)(scheduler@0.19.0)(slate-history@0.93.0)(slate-hyperscript@0.77.0)(slate-react@0.97.2)(slate@0.94.1)
       atob: 2.1.2
       color-string: 1.9.1
-      crypto-js: 4.1.1
+      crypto-js: 4.2.0
       date-fns: 2.30.0
       encoding: 0.1.13
       fetch-ponyfill: 7.1.0(encoding@0.1.13)
@@ -13742,7 +13742,7 @@ packages:
       '@udecode/plate-headless': 21.5.0(@babel/core@7.22.10)(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.19.0)(slate-history@0.93.0)(slate-hyperscript@0.77.0)(slate-react@0.97.2)(slate@0.94.1)
       atob: 2.1.2
       color-string: 1.9.1
-      crypto-js: 4.1.1
+      crypto-js: 4.2.0
       date-fns: 2.30.0
       encoding: 0.1.13
       fetch-ponyfill: 7.1.0(encoding@0.1.13)

@@ -9,10 +9,6 @@ const links: Link[] = [
     href: "/blog",
     text: "Blog",
   },
-  {
-    href: "/work",
-    text: "Work",
-  },
 ];
 
 export default links;

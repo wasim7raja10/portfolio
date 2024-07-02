@@ -4,7 +4,8 @@ import { Icon } from "astro-icon";
 import HeaderLink from "./HeaderLink.astro";
 import { links } from "@/shared/data";
 
-const currentPath = Astro.url.pathname.replace(/\/$/, "");
+const currentPath = Astro.url.pathname;
+console.log(currentPath);
 ---
 
 <!-- desktop -->
@@ -20,7 +21,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "");
           <HeaderLink
             href={link.href}
             class={`inline-block px-6 py-3 text-lg ${
-              currentPath === link.href.slice(1)
+              currentPath === link.href
                 ? "border-primary border-b"
                 : "hover:text-accent-foreground"
             }`}

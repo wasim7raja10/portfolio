@@ -21,8 +21,6 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        main: "var(--gradient-start)",
-        "gradient-end": "var(--gradient-end)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {

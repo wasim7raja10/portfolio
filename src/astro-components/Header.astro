@@ -2,7 +2,6 @@
 import { Icon } from "astro-icon";
 
 import HeaderLink from "./HeaderLink.astro";
-import MobileHeader from "./MobileHeader";
 import { links } from "@/shared/data";
 
 const pathname = new URL(Astro.request.url).pathname;
@@ -10,7 +9,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <!-- desktop -->
-<header class="fixed left-0 right-0 top-0 hidden bg-main md:block">
+<header class="sticky left-0 right-0 top-0">
   <nav class="container flex justify-between px-8">
     <div>
       <!-- logo -->
@@ -41,6 +40,3 @@ const currentPath = pathname.slice(1); // remove the first "/"
     </div>
   </nav>
 </header>
-
-<!-- mobile -->
-<MobileHeader client:only="react" />

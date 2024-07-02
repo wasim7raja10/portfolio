@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev -c 'astro dev'",
+    "dev": "tinacms dev -c \"astro dev\"", 
     "start": "tinacms build && astro dev",
     "build": "tinacms build && astro build",
     "preview": "tinacms build && astro preview",
@@ -26,7 +26,6 @@
     "astro-icon": "^0.8.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
-    "lucide-react": "^0.268.0",
     "prettier-plugin-organize-imports": "^3.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

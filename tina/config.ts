@@ -19,6 +19,14 @@ export default defineConfig({
       publicFolder: "public",
     },
   },
+  search: {
+    tina: {
+      indexerToken: process.env.TINA_SEARCH_TOKEN,
+      stopwordLanguages: ["eng"],
+    },
+    indexBatchSize: 100,
+    maxSearchIndexFieldLength: 100,
+  },
   schema: {
     collections: [
       {
@@ -34,10 +42,32 @@ export default defineConfig({
             required: true,
           },
           {
+            type: "string",
+            name: "description",
+            label: "Description",
+            description: "A short description of the post",
+          },
+          {
             type: "datetime",
             name: "pubDate",
             label: "Date Posted",
             required: true,
+          },
+          {
+            type: "image",
+            name: "heroImage",
+            label: "Hero Image",
+          },
+          {
+            type: "string",
+            name: "layout",
+            label: "Layout",
+            description: "../../layouts/BlogPost.astro",
+            required: true,
+            ui: {
+              component: "select",
+            },
+            options: ["../../layouts/BlogPost.astro"],
           },
           {
             type: "rich-text",

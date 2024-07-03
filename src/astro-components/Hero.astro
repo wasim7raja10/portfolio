@@ -2,40 +2,51 @@
 import Icon from "astro-icon";
 ---
 
-<section class="flex h-96 flex-col justify-center md:h-screen">
-  <div>
-    <div>
-      <p class="text-sm">Hi, my name is</p>
-      <h1 class="pb-1 font-mono text-3xl font-bold uppercase md:text-6xl">
-        Wasim Raja
-      </h1>
-      <p class="font-medium md:text-2xl">Front-end developer at clearcals</p>
-    </div>
-    <p class="max-w-[500px] py-6 font-medium md:text-xl">
-      I build accessible, inclusive products and digital experience for web and
-      mobile app.
+<section class="flex flex-col justify-center py-20">
+  <div class="space-y-4">
+    <h1
+      class="vai-[#495057] max-w-max bg-gradient-to-r from-[#212529] to-[#343a40] bg-clip-text text-4xl font-bold uppercase text-transparent"
+    >
+      Wasim Raja
+    </h1>
+    <p>Hey, I am Wasim Raja, a Software Engineer.</p>
+    <p>
+      I am passionate about building accessible, inclusive and awesome projects
+      using modern technologies. Continuously learning and improving my skills.
     </p>
+    <p>
+      Hire me fulltime / for your next project or just say
+      <span class="font-medium">'hi'</span>. I am currently open for
+      opportunities.
+    </p>
+    <p>Fine me on</p>
     <!-- social media -->
-    <div class="flex gap-3">
-      <div class="icon grid h-8 w-8 place-content-center rounded-full">
-        <Icon name="mdi:email" size="24" />
-      </div>
-      <div class="icon grid h-8 w-8 place-content-center rounded-full">
-        <Icon name="mdi:twitter" size="24" />
-      </div>
-      <div class="icon grid h-8 w-8 place-content-center rounded-full">
-        <Icon name="mdi:github" size="24" />
-      </div>
-      <div class="icon grid h-8 w-8 place-content-center rounded-full">
-        <Icon name="mdi:linkedin" size="24" />
-      </div>
+    <div class="space-x-3">
+      <a
+        href="https://github.com/wasim7raja10/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link link-neutral underline-offset-4"
+      >
+        <Icon name="mdi:github" class="inline" size="20" /> GitHub
+      </a>
+      <a
+        href="https://www.linkedin.com/in/wasim-r-31857014b/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link link-neutral underline-offset-4"
+      >
+        <Icon name="mdi:linkedin" class="inline" size="20" /> LinkedIn
+      </a>
     </div>
+    <p>
+      Or mail me at 
+      <a
+        href="mailto:wasimr09@outlook.com"
+        class="link link-neutral font-mono underline-offset-4"
+      >
+        wasimr09@outlook.com
+      </a>
+    </p>
   </div>
 </section>
-
-<style scoped>
-  .icon {
-    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
-      0px 1px 2px 0px rgba(0, 0, 0, 0.3);
-  }
-</style>

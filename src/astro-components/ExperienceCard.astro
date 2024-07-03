@@ -31,7 +31,7 @@ const isOdd = index % 2 !== 0;
         {formatDate(data.endDate)}
       </time>
     </div>
-    <div class="space-y-4 text-start max-w-2xl">
+    <div class="max-w-2xl space-y-4 text-start">
       <div class="text-lg font-black">
         {data.role} - {data.company}
       </div>
@@ -41,7 +41,7 @@ const isOdd = index % 2 !== 0;
       <div class="flex max-w-max flex-wrap gap-2">
         {
           data.skills.map((item) => (
-            <span class="border-accent rounded-full border px-2 text-sm">
+            <span class="border-secondary rounded-full border px-2 text-sm">
               {item}
             </span>
           ))

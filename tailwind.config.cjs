@@ -11,12 +11,12 @@ module.exports = {
       center: true,
       padding: "1rem",
       screens: {
-        "xl": "960px",
+        xl: "820px",
       },
     },
   },
   daisyui: {
-    themes: ["light"],
+    themes: ["lofi"],
   },
   plugins: [require("daisyui")],
 };

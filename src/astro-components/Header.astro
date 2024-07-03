@@ -22,8 +22,8 @@ console.log(currentPath);
             href={link.href}
             class={`inline-block px-6 py-3 text-lg ${
               currentPath === link.href
-                ? "border-primary border-b"
-                : "hover:text-accent-foreground"
+                ? " border-b border-accent"
+                : ""
             }`}
           >
             {link.text}
@@ -32,7 +32,7 @@ console.log(currentPath);
       }
       <HeaderLink
         href="https://github.com/withastro/astro"
-        class="inline-block px-6 py-3 hover:text-accent-foreground"
+        class="inline-block px-6 py-3"
         target="_blank"
       >
         <Icon name="mdi:github" size="24" />

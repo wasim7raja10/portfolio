@@ -6,9 +6,9 @@ type Props = { data: Experience };
 const { data } = Astro.props;
 ---
 
-<div class="flex gap-10 py-5">
+<div class="">
   <!-- date -->
-  <div class="w-48 text-xl">
+  <div class="">
     <time datetime={data.startDate}>
       {formatDate(data.startDate)}
     </time> -
@@ -17,19 +17,15 @@ const { data } = Astro.props;
     </time>
   </div>
   <!-- content -->
-  <div class="max-w-xl space-y-4">
-    <div class="flex text-2xl font-semibold">
+  <div class="">
+    <div class="">
       <h3>{data.role}</h3> &nbsp; - &nbsp; <h3>{data.company}</h3>
     </div>
-    <ul class="list-inside list-disc text-lg">
+    <ul class="">
       {data.description.map((item) => <li>{item}</li>)}
     </ul>
-    <ul class="flex gap-2">
-      {
-        data.skills.map((item) => (
-          <li class=" rounded-3xl px-3 py-1">{item}</li>
-        ))
-      }
+    <ul class="">
+      {data.skills.map((item) => <li class="">{item}</li>)}
     </ul>
   </div>
 </div>

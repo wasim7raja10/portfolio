@@ -5,11 +5,15 @@ import { experienceData } from "@/shared/data";
 ---
 
 <section class="space-y-12 py-24">
-  <h2 class="text-2xl font-bold">Experiences</h2>
+  <h2 class="text-2xl font-bold text-primary">Experiences</h2>
 
   <div
-    class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact"
+    class="timeline timeline-vertical timeline-snap-icon timeline-compact"
   >
-    {experienceData.experiences.map((item) => <ExperienceCard data={item} />)}
+    {
+      experienceData.experiences.map((item, i) => (
+        <ExperienceCard data={item} index={i} />
+      ))
+    }
   </div>
 </section>

@@ -1,9 +1,10 @@
 ---
 import { Experience } from "@/shared/model";
-import { formatDate } from "@/lib/utils";
+import { cn, formatDate } from "@/lib/utils";
 
-type Props = { data: Experience };
-const { data } = Astro.props;
+type Props = { data: Experience; index: number };
+const { data, index } = Astro.props;
+const isOdd = index % 2 !== 0;
 ---
 
 <li>
@@ -20,7 +21,7 @@ const { data } = Astro.props;
         clip-rule="evenodd"></path>
     </svg>
   </div>
-  <div class="timeline-start mb-10 pb-6 md:text-end">
+  <div class="timeline-end mb-10">
     <!-- date -->
     <div class="">
       <time class="font-mono italic" datetime={data.startDate}>
@@ -30,14 +31,14 @@ const { data } = Astro.props;
         {formatDate(data.endDate)}
       </time>
     </div>
-    <div class="space-y-4">
-      <div class="flex text-lg font-black">
-        <h3>{data.role} - {data.company}</h3>
+    <div class="space-y-4 text-start max-w-2xl">
+      <div class="text-lg font-black">
+        {data.role} - {data.company}
       </div>
       <ul class="">
         {data.description.map((item) => <li>- {item}</li>)}
       </ul>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex max-w-max flex-wrap gap-2">
         {
           data.skills.map((item) => (
             <span class="border-accent rounded-full border px-2 text-sm">

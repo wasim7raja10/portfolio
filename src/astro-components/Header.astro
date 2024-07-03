@@ -21,9 +21,7 @@ console.log(currentPath);
           <HeaderLink
             href={link.href}
             class={`inline-block px-6 py-3 text-lg ${
-              currentPath === link.href
-                ? " border-b border-accent"
-                : ""
+              currentPath === link.href ? " border-secondary border-b" : ""
             }`}
           >
             {link.text}

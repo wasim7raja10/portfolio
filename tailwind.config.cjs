@@ -9,14 +9,14 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
-        "2xl": "1200px",
+        "xl": "960px",
       },
     },
   },
   daisyui: {
-    themes: false,
+    themes: ["light"],
   },
   plugins: [require("daisyui")],
 };

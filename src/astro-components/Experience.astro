@@ -1,12 +1,11 @@
 ---
 import ExperienceCard from "./ExperienceCard.astro";
+import SectionWrapper from "./SectionWrapper.astro";
 
 import { experienceData } from "@/shared/data";
 ---
 
-<section class="space-y-8">
-  <h2 class="text-2xl font-bold text-primary">Experiences</h2>
-
+<SectionWrapper sectionName="Experience">
   <div class="timeline timeline-vertical timeline-compact timeline-snap-icon">
     {
       experienceData.experiences.map((item, i) => (
@@ -14,4 +13,4 @@ import { experienceData } from "@/shared/data";
       ))
     }
   </div>
-</section>
+</SectionWrapper>

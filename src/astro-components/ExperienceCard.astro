@@ -1,10 +1,9 @@
 ---
 import { Experience } from "@/shared/model";
-import { cn, formatDate } from "@/lib/utils";
+import { formatDate } from "@/lib/utils";
 
-type Props = { data: Experience; index: number };
-const { data, index } = Astro.props;
-const isOdd = index % 2 !== 0;
+type Props = { data: Experience };
+const { data } = Astro.props;
 ---
 
 <li>
@@ -23,7 +22,7 @@ const isOdd = index % 2 !== 0;
   </div>
   <div class="timeline-end mb-10">
     <!-- date -->
-    <div class="">
+    <div>
       <time class="font-mono italic" datetime={data.startDate}>
         {formatDate(data.startDate)}
       </time> -
@@ -35,15 +34,13 @@ const isOdd = index % 2 !== 0;
       <div class="text-lg font-black">
         {data.role} - {data.company}
       </div>
-      <ul class="">
+      <ul>
         {data.description.map((item) => <li>- {item}</li>)}
       </ul>
-      <div class="flex max-w-max flex-wrap gap-2">
+      <div class="space-x-2">
         {
           data.skills.map((item) => (
-            <span class="border-secondary hover:bg-base-300 rounded-full border px-2 text-sm">
-              {item}
-            </span>
+            <span class="badge badge-ghost">{item}</span>
           ))
         }
       </div>

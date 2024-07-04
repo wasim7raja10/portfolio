@@ -6,7 +6,13 @@ import { projectData } from "@/shared/data";
 ---
 
 <SectionWrapper sectionName="Projects">
-  <div class="space-y-4">
-    {projectData.projects.map((item) => <ProjectCard data={item} />)}
-  </div>
+  <ul
+    class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact"
+  >
+    {
+      projectData.projects.map((item, index) => (
+        <ProjectCard data={item} index={index} />
+      ))
+    }
+  </ul>
 </SectionWrapper>

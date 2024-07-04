@@ -6,11 +6,11 @@ import { experienceData } from "@/shared/data";
 ---
 
 <SectionWrapper sectionName="Experience">
-  <div class="timeline timeline-vertical timeline-compact timeline-snap-icon">
+  <ul class="timeline timeline-vertical timeline-compact timeline-snap-icon">
     {
       experienceData.experiences.map((item, i) => (
-        <ExperienceCard data={item} index={i} />
+        <ExperienceCard data={item} />
       ))
     }
-  </div>
+  </ul>
 </SectionWrapper>

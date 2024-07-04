@@ -17,7 +17,7 @@ export function formatDate(dateString) {
     return "Current";
   } else {
     // Format the date as "Month Year"
-    const formattedDate = inputDate.toLocaleDateString("in", {
+    const formattedDate = inputDate.toLocaleDateString("us", {
       year: "numeric",
       month: "short",
     });

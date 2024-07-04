@@ -9,12 +9,7 @@
         "It contains all my projects, experiences.",
         "List of blogs about various topics."
       ],
-      "skills": [
-        "shadcn/ui",
-        "Astro",
-        "Tailwind",
-        "Tina CMS"
-      ],
+      "skills": ["shadcn/ui", "Astro", "Tailwind", "Tina CMS"],
       "liveUrl": "https://wasimraja.netlify.app",
       "githubUrl": "https://github.com/wasim7raja10/portfolio"
     },
@@ -27,10 +22,7 @@
         "Check book information.",
         "Add book from book database to the tracking list."
       ],
-      "skills": [
-        "CSS",
-        "React"
-      ],
+      "skills": ["CSS", "React"],
       "liveUrl": "https://readtrack.netlify.app/",
       "githubUrl": "https://github.com/wasim7raja10/nd0191-c1-myreads"
     },
@@ -43,11 +35,7 @@
         "Students can participate in events.",
         "Aim of this web app was to help students find Resources, Events, etc."
       ],
-      "skills": [
-        "Tailwind",
-        "React",
-        "Firebase"
-      ],
+      "skills": ["Tailwind", "React", "Firebase"],
       "liveUrl": "https://codechefbcetchapter.netlify.app/",
       "githubUrl": "https://github.com/CodeChef-BCET-Chapter/ccbcet-website"
     }

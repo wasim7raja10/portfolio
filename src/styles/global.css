@@ -2,17 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  overflow-y: scroll;
-}
-
-html,
-body {
-  @apply h-full;
-}
-body {
-  @apply flex h-screen flex-col;
-}
-main {
-  @apply flex-grow py-20;
+@layer base {
+  html {
+    @apply overflow-y-scroll;
+  }
+  html,
+  body {
+    @apply h-full;
+  }
+  body {
+    @apply flex h-screen flex-col;
+  }
+  main {
+    @apply flex-grow py-20;
+  }
 }

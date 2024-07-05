@@ -12,8 +12,8 @@ const isActive = currentPath === href;
 <a
   href={href}
   {...props}
-  class={cn("inline-block px-4 py-2", {
-    "border-secondary border-b": isActive,
+  class={cn("inline-block px-4 py-1", {
+    "bg-base-300": isActive,
   })}
 >
   <slot />

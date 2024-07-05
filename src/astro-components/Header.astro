@@ -4,13 +4,13 @@ import { links } from "@/shared/data";
 ---
 
 <!-- desktop -->
-<header class="container fixed inset-x-0 top-0 z-50 mt-6 max-w-max">
+<header class="container fixed inset-x-0 top-0 z-50 mt-6 max-w-max select-none">
   <nav class="mx-auto flex justify-between">
     <div>
       <!-- logo -->
     </div>
 
-    <div class="flex items-center rounded-md border overflow-clip">
+    <div class="flex items-center overflow-clip rounded-md border">
       {
         links.map((link) => (
           <HeaderLink href={link.href}>{link.text}</HeaderLink>

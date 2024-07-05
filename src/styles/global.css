@@ -8,12 +8,10 @@ html {
 
 html,
 body {
-  height: 100%;
+  @apply h-full;
 }
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  @apply flex h-screen flex-col;
 }
 main {
   @apply flex-grow py-20;

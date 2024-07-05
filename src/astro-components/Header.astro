@@ -4,16 +4,14 @@ import { links } from "@/shared/data";
 ---
 
 <!-- desktop -->
-<header
-  class="container sticky left-0 right-0 top-4 z-50 rounded-md bg-base-100"
->
-  <nav class="relative flex justify-between">
+<header class="container fixed inset-x-0 bottom-0 z-50 mb-6 max-w-max">
+  <nav class="mx-auto flex justify-between">
     <div>
       <!-- logo -->
     </div>
 
     <div
-      class="absolute right-0 flex items-center rounded-md border bg-base-100 overflow-clip p-1"
+      class="flex items-center overflow-clip rounded-md border bg-secondary text-secondary-content p-1"
     >
       {
         links.map((link) => (

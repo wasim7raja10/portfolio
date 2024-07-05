@@ -1,26 +1,20 @@
 ---
-import Header from "@/astro-components/Header.astro";
 import Base from "../layouts/Base.astro";
 import Hero from "@/astro-components/Hero.astro";
 import Experience from "@/astro-components/Experience.astro";
 import Project from "@/astro-components/Project.astro";
-import BlogSection from "@/astro-components/BlogSection.astro";
-import { SITE_TITLE } from "../config";
 ---
 
 <Base>
-  <div class="from-main">
-    <Header title={SITE_TITLE} />
-    <div class="container">
-      <Hero />
+  <div class="container">
+    <Hero />
 
-      <div class="space-y-14">
-        <Experience />
+    <div class="space-y-14">
+      <Experience />
 
-        <Project />
+      <Project />
 
-        <!-- <BlogSection /> -->
-      </div>
+      <!-- <BlogSection /> -->
     </div>
   </div>
 </Base>

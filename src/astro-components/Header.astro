@@ -10,9 +10,7 @@ import { links } from "@/shared/data";
       <!-- logo -->
     </div>
 
-    <div
-      class="flex items-center rounded-md border bg-secondary p-1 text-secondary-content"
-    >
+    <div class="flex items-center rounded-md border overflow-clip">
       {
         links.map((link) => (
           <HeaderLink href={link.href}>{link.text}</HeaderLink>

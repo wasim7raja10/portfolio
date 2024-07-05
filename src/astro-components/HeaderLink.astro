@@ -12,8 +12,8 @@ const isActive = currentPath === href;
 <a
   href={href}
   {...props}
-  class={cn("px-2 py-[2px] rounded-md", {
-    "bg-base-100 text-primary": isActive,
+  class={cn("px-2 py-[2px]", {
+    "bg-base-300 text-primary": isActive,
   })}
 >
   <slot />

@@ -11,9 +11,9 @@
     @apply h-full;
   }
   body {
-    @apply flex h-screen flex-col;
+    @apply flex flex-col;
   }
   main {
-    @apply flex-grow py-20;
+    @apply flex-shrink-0 flex-grow py-20;
   }
 }

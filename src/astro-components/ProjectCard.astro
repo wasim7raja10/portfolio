@@ -1,47 +1,50 @@
 ---
-import { Project } from "@/shared/model";
-import { formatDate } from "@/lib/utils";
-import { Icon } from "astro-icon";
+import TickIcon from "@/svg/TickIcon.astro";
 
-type Props = { data: Project };
-const { data } = Astro.props;
+import type { Project } from "@/shared/model";
+import { formatDate, cn } from "@/lib/utils";
+
+type Props = { data: Project; index: number };
+const { data, index } = Astro.props;
+const isOdd = index % 2 !== 0;
 ---
 
-<div class="flex gap-12 py-5">
-  <!-- image -->
-  <div class="grid min-h-max place-content-center">
-    <img
-      src={data.image}
-      alt={data.image}
-      loading="lazy"
-      width="320"
-      height="160"
-      class="h-40 w-80 rounded-xl"
-    />
+<li>
+  <div class="timeline-middle">
+    <TickIcon />
   </div>
-
-  <!-- data -->
-  <div class="space-y-4">
-    <div>
-      <div class="w-48 text-xs">
-        <time datetime={data.startDate}>
-          {formatDate(data.startDate)}
-        </time> -
-        <time datetime={data.endDate}>
-          {formatDate(data.endDate)}
-        </time>
-      </div>
-      <h3 class="text-2xl font-semibold">{data.name}</h3>
+  <div
+    class={cn(
+      "mb-10",
+      { "timeline-end ": isOdd },
+      { "timeline-start md:text-end": !isOdd }
+    )}
+  >
+    <!-- date -->
+    <div class="mb-2">
+      <time class="font-mono italic" datetime={data.startDate}>
+        {formatDate(data.startDate)}
+      </time> -
+      <time class="font-mono italic" datetime={data.endDate}>
+        {formatDate(data.endDate)}
+      </time>
     </div>
-    <ul class="list-inside list-disc text-lg">
-      {data.description.map((item) => <li>{item}</li>)}
-    </ul>
-    <ul class="flex gap-2">
-      {
-        data.skills.map((item) => (
-          <li class=" rounded-3xl px-3 py-1">{item}</li>
-        ))
-      }
-    </ul>
+    <div class="card mx-auto max-w-sm bg-base-100 shadow-xl">
+      <figure class="border">
+        <img src={data.image} alt="Shoes" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">
+          {data.name}
+        </h2>
+        <ul class="mb-2 space-y-1 text-start">
+          {data.description.map((item) => <li>- {item}</li>)}
+        </ul>
+        <ul class="card-actions justify-end">
+          {data.skills.map((item) => <li class="badge badge-ghost">{item}</li>)}
+        </ul>
+      </div>
+    </div>
   </div>
-</div>
+  <hr />
+</li>

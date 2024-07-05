@@ -9,14 +9,7 @@
         "Ownership of a enterprise application which is a one-stop CRM solution for dieticians.",
         "Ownership of a marketing website which includes product marketing information, blogs, etc."
       ],
-      "skills": [
-        "React",
-        "RxJs",
-        "Angular Material",
-        "Angular",
-        "Sass",
-        "NgRx"
-      ]
+      "skills": ["React", "RxJs", "Angular Material", "Angular", "Sass", "NgRx"]
     },
     {
       "role": "Frontend Developer",
@@ -27,12 +20,7 @@
         "Developed an analytics dashboard to track sponsorship, ad revenue, shipment of products.",
         "Developed components like infinite scrollable short video player (like TikTok)."
       ],
-      "skills": [
-        "Firebase",
-        "Tailwind",
-        "Next.js",
-        "React.js"
-      ]
+      "skills": ["Firebase", "Tailwind", "Next.js", "React.js"]
     }
   ]
 }

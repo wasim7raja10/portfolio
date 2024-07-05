@@ -1,29 +1,20 @@
 ---
-import { Experience } from "@/shared/model";
-import { cn, formatDate } from "@/lib/utils";
+import TickIcon from "@/svg/TickIcon.astro";
 
-type Props = { data: Experience; index: number };
-const { data, index } = Astro.props;
-const isOdd = index % 2 !== 0;
+import type { Experience } from "@/shared/model";
+import { formatDate } from "@/lib/utils";
+
+type Props = { data: Experience };
+const { data } = Astro.props;
 ---
 
 <li>
   <div class="timeline-middle">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      fill="currentColor"
-      class="h-5 w-5"
-    >
-      <path
-        fill-rule="evenodd"
-        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-        clip-rule="evenodd"></path>
-    </svg>
+    <TickIcon />
   </div>
   <div class="timeline-end mb-10">
     <!-- date -->
-    <div class="">
+    <div>
       <time class="font-mono italic" datetime={data.startDate}>
         {formatDate(data.startDate)}
       </time> -
@@ -35,15 +26,13 @@ const isOdd = index % 2 !== 0;
       <div class="text-lg font-black">
         {data.role} - {data.company}
       </div>
-      <ul class="">
+      <ul>
         {data.description.map((item) => <li>- {item}</li>)}
       </ul>
-      <div class="flex max-w-max flex-wrap gap-2">
+      <div class="space-x-2">
         {
           data.skills.map((item) => (
-            <span class="border-secondary hover:bg-base-300 rounded-full border px-2 text-sm">
-              {item}
-            </span>
+            <span class="badge badge-ghost">{item}</span>
           ))
         }
       </div>

@@ -1,13 +1,18 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
+import SectionWrapper from "./SectionWrapper.astro";
 
 import { projectData } from "@/shared/data";
 ---
 
-<section class="space-y-12 py-24">
-  <h2 class="text-5xl font-bold">Projects</h2>
-
-  <div class="space-y-4">
-    {projectData.projects.map((item) => <ProjectCard data={item} />)}
-  </div>
-</section>
+<SectionWrapper sectionName="Projects">
+  <ul
+    class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact"
+  >
+    {
+      projectData.projects.map((item, index) => (
+        <ProjectCard data={item} index={index} />
+      ))
+    }
+  </ul>
+</SectionWrapper>

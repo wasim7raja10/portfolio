@@ -1,0 +1,7 @@
+public/*
+.vscode/*
+node_modules/*
+dist/*
+tina/*
+package-lock.json
+pnpm-lock.yaml

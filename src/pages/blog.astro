@@ -1,8 +1,6 @@
 ---
 import BlogCard from "@/astro-components/BlogCard.astro";
 import Base from "../layouts/Base.astro";
-import Header from "@/astro-components/Header.astro";
-import { SITE_TITLE } from "@/config";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
@@ -13,18 +11,15 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 ---
 
 <Base>
-  <Header title={SITE_TITLE} />
-  <main class="container">
-    <section>
-      <ul class="space-y-4">
-        {
-          posts.map((post) => (
-            <li>
-              <BlogCard post={post} />
-            </li>
-          ))
-        }
-      </ul>
-    </section>
-  </main>
+  <div class="container">
+    <ul class="space-y-4">
+      {
+        posts.map((post) => (
+          <li>
+            <BlogCard post={post} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </Base>

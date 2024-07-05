@@ -3,9 +3,15 @@ const today = new Date();
 import { SITE_TITLE } from "../config";
 ---
 
-<footer
-  class="text-md mt-20 flex items-center justify-center py-4 font-thin text-info-content"
->
-  &copy; {today.getFullYear()}
-  {SITE_TITLE}. All rights reserved.
+<footer class="footer footer-center py-4 font-thin text-info-content">
+  <div class="flex items-center">
+    <a
+      href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link link-primary underline-offset-4"
+    >
+      CC BY-NC-SA 4.0
+    </a> 2023-{today.getFullYear()} &copy; {SITE_TITLE}
+  </div>
 </footer>

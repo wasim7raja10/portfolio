@@ -14,16 +14,16 @@ const { data } = Astro.props;
   </div>
   <div class="timeline-end mb-10">
     <!-- date -->
-    <div>
-      <time class="font-mono italic" datetime={data.startDate}>
+    <div class="mt-[2px] font-mono italic">
+      <time datetime={data.startDate}>
         {formatDate(data.startDate)}
       </time> -
-      <time class="font-mono italic" datetime={data.endDate}>
+      <time datetime={data.endDate}>
         {formatDate(data.endDate)}
       </time>
     </div>
     <div class="max-w-2xl space-y-4 text-start">
-      <div class="text-lg font-black">
+      <div class="text-lg font-medium">
         {data.role} - {data.company}
       </div>
       <ul>

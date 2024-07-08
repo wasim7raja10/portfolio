@@ -14,30 +14,28 @@ const isOdd = index % 2 !== 0;
     <TickIcon />
   </div>
   <div
-    class={cn(
-      "mb-10",
-      { "timeline-end ": isOdd },
-      { "timeline-start md:text-end": !isOdd }
-    )}
+    class={cn("pb-10", { "timeline-end": isOdd }, { "timeline-start": !isOdd })}
   >
     <!-- date -->
-    <div class="mb-2">
-      <time class="font-mono italic" datetime={data.startDate}>
+    <div
+      class={cn("mb-2 mt-[2px] font-mono italic", { "md:text-end": !isOdd })}
+    >
+      <time datetime={data.startDate}>
         {formatDate(data.startDate)}
       </time> -
-      <time class="font-mono italic" datetime={data.endDate}>
+      <time datetime={data.endDate}>
         {formatDate(data.endDate)}
       </time>
     </div>
-    <div class="card mx-auto max-w-sm bg-base-100 shadow-xl">
-      <figure class="border">
+    <div class="card-compact card mx-auto max-w-sm bg-base-100 shadow-xl">
+      <figure class="border-b">
         <img src={data.image} alt="Shoes" />
       </figure>
       <div class="card-body">
-        <h2 class="card-title">
+        <h2 class="text-lg font-medium">
           {data.name}
         </h2>
-        <ul class="mb-2 space-y-1 text-start">
+        <ul class="mb-2 space-y-1 text-start text-base">
           {data.description.map((item) => <li>- {item}</li>)}
         </ul>
         <ul class="card-actions justify-end">

@@ -3,9 +3,12 @@ import { Icon } from "astro-icon";
 const { post } = Astro.props;
 ---
 
-<a href={post.url}>
-  <h3 class="text-lg">{post.frontmatter.title}</h3>
-  <div class="flex items-center gap-2">
+<a
+  href={post.url}
+  class="flex flex-col gap-1 rounded-md py-2 sm:opacity-60 hover:opacity-100 sm:justify-between sm:flex-row"
+>
+  <h3 class="">{post.frontmatter.title}</h3>
+  <div class="flex min-w-max items-center gap-2">
     <Icon name="uit:calender" class="text-secondary" size="16" />
     <time class="text-sm" datetime={post.frontmatter.pubDate}>
       {

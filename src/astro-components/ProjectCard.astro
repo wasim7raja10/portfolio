@@ -14,14 +14,12 @@ const isOdd = index % 2 !== 0;
     <TickIcon />
   </div>
   <div
-    class={cn(
-      "pb-10",
-      { "timeline-end": isOdd },
-      { "timeline-start md:text-end": !isOdd }
-    )}
+    class={cn("pb-10", { "timeline-end": isOdd }, { "timeline-start": !isOdd })}
   >
     <!-- date -->
-    <div class="mb-2 mt-[2px] font-mono italic">
+    <div
+      class={cn("mb-2 mt-[2px] font-mono italic", { "md:text-end": !isOdd })}
+    >
       <time datetime={data.startDate}>
         {formatDate(data.startDate)}
       </time> -

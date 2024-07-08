@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import LoadingIndicator from "astro-loading-indicator/component";
 
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
@@ -45,3 +46,4 @@ const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <ViewTransitions />
+<LoadingIndicator color="black" height="3px" />

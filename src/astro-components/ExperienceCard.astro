@@ -2,7 +2,7 @@
 import TickIcon from "@/svg/TickIcon.astro";
 
 import type { Experience } from "@/shared/model";
-import { formatDate } from "@/lib/utils";
+import { formatDateAsMonthYear } from "@/lib/utils";
 
 type Props = { data: Experience };
 const { data } = Astro.props;
@@ -16,10 +16,10 @@ const { data } = Astro.props;
     <!-- date -->
     <div class="mt-[2px] font-mono italic">
       <time datetime={data.startDate}>
-        {formatDate(data.startDate)}
+        {formatDateAsMonthYear(data.startDate)}
       </time> -
       <time datetime={data.endDate}>
-        {formatDate(data.endDate)}
+        {formatDateAsMonthYear(data.endDate)}
       </time>
     </div>
     <div class="max-w-2xl space-y-4 text-start">

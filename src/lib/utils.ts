@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function formatDate(dateString) {
+export function formatDateAsMonthYear(dateString: string) {
   // Convert the input string to a Date object
   const inputDate = new Date(dateString);
 

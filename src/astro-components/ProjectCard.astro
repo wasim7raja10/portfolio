@@ -2,7 +2,7 @@
 import TickIcon from "@/svg/TickIcon.astro";
 
 import type { Project } from "@/shared/model";
-import { formatDate, cn } from "@/lib/utils";
+import { formatDateAsMonthYear, cn } from "@/lib/utils";
 
 type Props = { data: Project; index: number };
 const { data, index } = Astro.props;
@@ -21,13 +21,13 @@ const isOdd = index % 2 !== 0;
       class={cn("mb-2 mt-[2px] font-mono italic", { "md:text-end": !isOdd })}
     >
       <time datetime={data.startDate}>
-        {formatDate(data.startDate)}
+        {formatDateAsMonthYear(data.startDate)}
       </time> -
       <time datetime={data.endDate}>
-        {formatDate(data.endDate)}
+        {formatDateAsMonthYear(data.endDate)}
       </time>
     </div>
-    <div class="card-compact card mx-auto max-w-sm bg-base-100 shadow-xl">
+    <div class="card card-compact mx-auto max-w-sm bg-base-100 shadow-xl">
       <figure class="border-b">
         <img src={data.image} alt="Shoes" />
       </figure>

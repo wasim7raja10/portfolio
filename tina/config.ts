@@ -32,7 +32,7 @@ export default defineConfig({
       {
         name: "post",
         label: "Posts",
-        path: "src/pages/blog",
+        path: "src/content/blogs",
         fields: [
           {
             type: "string",
@@ -54,20 +54,31 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "image",
-            name: "heroImage",
-            label: "Hero Image",
+            type: "object",
+            name: "cover",
+            label: "Cover Image",
+            description: "The image used as the cover for the post",
+            fields: [
+              {
+                type: "image",
+                name: "url",
+                label: "URL",
+                description: "The URL of the image",
+              },
+              {
+                type: "string",
+                name: "alt",
+                label: "Alt Text",
+                description: "The alt text of the image",
+              },
+            ],
           },
           {
             type: "string",
-            name: "layout",
-            label: "Layout",
-            description: "../../layouts/BlogPost.astro",
-            required: true,
-            ui: {
-              component: "select",
-            },
-            options: ["../../layouts/BlogPost.astro"],
+            name: "tags",
+            label: "Tags",
+            description: "Tags for the post",
+            list: true,
           },
           {
             type: "rich-text",

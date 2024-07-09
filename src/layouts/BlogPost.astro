@@ -29,6 +29,11 @@ const { frontmatter } = Astro.props;
             </time>
           )
         }
+        {
+          frontmatter.cover && (
+            <img src={frontmatter.cover.url} alt={frontmatter.cover.alt} />
+          )
+        }
         <slot />
       </article>
     </main>

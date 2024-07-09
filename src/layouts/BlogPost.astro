@@ -30,6 +30,13 @@ const { frontmatter } = Astro.props;
           )
         }
         {
+          frontmatter.updateDate && (
+            <time datetime={frontmatter.updateDate.toISOString()}>
+              {formatDateAsDayMonthYear(frontmatter.updateDate)}
+            </time>
+          )
+        }
+        {
           frontmatter.cover && (
             <img src={frontmatter.cover.url} alt={frontmatter.cover.alt} />
           )

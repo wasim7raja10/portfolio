@@ -54,6 +54,12 @@ export default defineConfig({
             required: true,
           },
           {
+            type: "datetime",
+            name: "updateDate",
+            label: "Date Updated",
+            description: "The date the post was last updated",
+          },
+          {
             type: "object",
             name: "cover",
             label: "Cover Image",

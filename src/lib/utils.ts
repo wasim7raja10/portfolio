@@ -25,9 +25,9 @@ export function formatDateAsMonthYear(dateString: string) {
   }
 }
 
-export function formatDateAsDayMonthYear(dateString: string) {
+export function formatDateAsDayMonthYear(date: Date) {
   // Convert the input string to a Date object
-  const inputDate = new Date(dateString);
+  const inputDate = new Date(date);
 
   // Format the date as "Day Month Year"
   const formattedDate = inputDate.toLocaleDateString("us", {

@@ -1,4 +1,4 @@
-import { Link } from "../model";
+import type { Link } from "../model";
 
 const links: Link[] = [
   {
@@ -6,8 +6,8 @@ const links: Link[] = [
     text: "Home",
   },
   {
-    href: "/blog/",
-    text: "Blog",
+    href: "/blogs/",
+    text: "Blogs",
   },
 ];
 

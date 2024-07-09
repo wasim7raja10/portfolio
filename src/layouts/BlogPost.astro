@@ -2,52 +2,45 @@
 import BaseHead from "@/astro-components/BaseHead.astro";
 import Header from "@/astro-components/Header.astro";
 import Footer from "@/astro-components/Footer.astro";
+import type { CollectionEntry } from "astro:content";
+import { formatDateAsDayMonthYear } from "@/lib/utils";
 
-export interface Props {
-  content: {
-    title: string;
-    description: string;
-    pubDate?: string;
-    updatedDate?: string;
-    heroImage?: string;
-  };
+interface Props {
+  frontmatter: CollectionEntry<"blogs">["data"];
 }
 
-const {
-  content: { title, description, pubDate, updatedDate, heroImage },
-} = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} />
-    <style>
-      .title {
-        font-size: 2em;
-        margin: 0.25em 0 0;
-      }
-      hr {
-        border-top: 1px solid #ddd;
-        margin: 1rem 0;
-      }
-    </style>
+    <BaseHead title={frontmatter.title} description={frontmatter.description} />
   </head>
-
   <body>
     <Header />
     <main>
       <article>
-        {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-        <h1 class="title">{title}</h1>
-        {pubDate && <time>{pubDate}</time>}
+        <h1 class="title">{frontmatter.title}</h1>
         {
-          updatedDate && (
-            <div>
-              Last updated on <time>{updatedDate}</time>
-            </div>
+          (
+            <time datetime={frontmatter.pubDate.toISOString()}>
+              {formatDateAsDayMonthYear(frontmatter.pubDate)}
+            </time>
           )
         }
-        <hr />
+        {
+          frontmatter.updateDate && (
+            <time datetime={frontmatter.updateDate.toISOString()}>
+              {formatDateAsDayMonthYear(frontmatter.updateDate)}
+            </time>
+          )
+        }
+        {
+          frontmatter.cover && (
+            <img src={frontmatter.cover.url} alt={frontmatter.cover.alt} />
+          )
+        }
         <slot />
       </article>
     </main>

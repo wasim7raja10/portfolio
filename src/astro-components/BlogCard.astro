@@ -1,23 +1,24 @@
 ---
+import { formatDateAsDayMonthYear } from "@/lib/utils";
+
 import { Icon } from "astro-icon";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  post: CollectionEntry<"blogs">;
+}
 const { post } = Astro.props;
 ---
 
 <a
-  href={post.url}
-  class="flex flex-col gap-1 rounded-md py-2 sm:opacity-60 hover:opacity-100 sm:justify-between sm:flex-row"
+  href={post.slug}
+  class="flex flex-col gap-1 rounded-md py-2 hover:opacity-100 sm:flex-row sm:justify-between sm:opacity-60"
 >
-  <h3 class="">{post.frontmatter.title}</h3>
+  <h3 class="">{post.data.title}</h3>
   <div class="flex min-w-max items-center gap-2">
     <Icon name="uit:calender" class="text-secondary" size="16" />
-    <time class="text-sm" datetime={post.frontmatter.pubDate}>
-      {
-        new Date(post.frontmatter.pubDate).toLocaleDateString("en-us", {
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-        })
-      }
+    <time class="text-sm" datetime={post.data.pubDate.toDateString()}>
+      {formatDateAsDayMonthYear(post.data.pubDate)}
     </time>
   </div>
 </a>

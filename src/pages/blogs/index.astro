@@ -1,0 +1,21 @@
+---
+import BlogCard from "@/astro-components/BlogCard.astro";
+import Base from "@/layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blogs");
+---
+
+<Base>
+  <div class="container">
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <BlogCard post={post} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Base>

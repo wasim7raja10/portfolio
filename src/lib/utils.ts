@@ -24,3 +24,16 @@ export function formatDateAsMonthYear(dateString: string) {
     return formattedDate;
   }
 }
+
+export function formatDateAsDayMonthYear(dateString: string) {
+  // Convert the input string to a Date object
+  const inputDate = new Date(dateString);
+
+  // Format the date as "Day Month Year"
+  const formattedDate = inputDate.toLocaleDateString("us", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+  return formattedDate;
+}

@@ -4,6 +4,8 @@ import Header from "@/astro-components/Header.astro";
 import Footer from "@/astro-components/Footer.astro";
 import type { CollectionEntry } from "astro:content";
 import { formatDateAsDayMonthYear } from "@/lib/utils";
+import { Image } from "astro:assets";
+import Icon from "astro-icon";
 
 interface Props {
   frontmatter: CollectionEntry<"blogs">["data"];
@@ -15,34 +17,49 @@ const { frontmatter } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={frontmatter.title} description={frontmatter.description} />
+    <BaseHead
+      title={frontmatter.title}
+      description={frontmatter.description}
+      image={frontmatter.cover.url.src}
+    />
   </head>
   <body>
     <Header />
     <main>
-      <article>
-        <h1 class="title">{frontmatter.title}</h1>
-        {
-          (
-            <time datetime={frontmatter.pubDate.toISOString()}>
-              {formatDateAsDayMonthYear(frontmatter.pubDate)}
-            </time>
-          )
-        }
-        {
-          frontmatter.updateDate && (
-            <time datetime={frontmatter.updateDate.toISOString()}>
-              {formatDateAsDayMonthYear(frontmatter.updateDate)}
-            </time>
-          )
-        }
-        {
-          frontmatter.cover && (
-            <img src={frontmatter.cover.url} alt={frontmatter.cover.alt} />
-          )
-        }
-        <slot />
-      </article>
+      <div class="container">
+        <div class="prose mx-auto md:prose-lg">
+          <section>
+            <h1>{frontmatter.title}</h1>
+            <div class="opacity-60 flex items-center gap-2">
+              <Icon name="uit:calender" class="text-secondary" size="18" />
+              {
+                frontmatter.updateDate ? (
+                  <time datetime={frontmatter.updateDate.toISOString()}>
+                    {formatDateAsDayMonthYear(frontmatter.updateDate)}
+                  </time>
+                ) : (
+                  <time datetime={frontmatter.pubDate.toISOString()}>
+                    {formatDateAsDayMonthYear(frontmatter.pubDate)}
+                  </time>
+                )
+              }
+            </div>
+            {
+              frontmatter.cover && (
+                // @ts-ignore
+                <Image
+                  class="mt-4 md:mt-2"
+                  src={frontmatter.cover.url}
+                  alt={frontmatter.cover.alt}
+                />
+              )
+            }
+          </section>
+          <article>
+            <slot />
+          </article>
+        </div>
+      </div>
     </main>
     <Footer />
   </body>

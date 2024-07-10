@@ -5,7 +5,7 @@ description: >-
   branch to another.
 pubDate: 2024-07-11T18:30:00.000Z
 cover:
-  url: ../../assets/images/blogs/git-cherry-pick-cover-image.png
+  url: /src/assets/images/blogs/git-cherry-pick-cover-image.png
   alt: git cherry-pick cover image - ai generated
 tags:
   - git
@@ -35,7 +35,7 @@ This command will cherry-pick the specified commit and apply it to the current b
 
 Suppose you need to cherry-pick a range of commits:
 
-![Screenshot showing a list of git commits](<../../assets/images/blog-posts/git commits.png>)
+![Screenshot showing a list of git commits](</src/assets/images/blog-posts/git commits.png>)
 
 You don't have to cherry-pick each commit individually. You can cherry-pick all the commits in one go using the following command:
 

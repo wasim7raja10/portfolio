@@ -4,6 +4,7 @@ import Header from "@/astro-components/Header.astro";
 import Footer from "@/astro-components/Footer.astro";
 import type { CollectionEntry } from "astro:content";
 import { formatDateAsDayMonthYear } from "@/lib/utils";
+import { Image } from "astro:assets";
 
 interface Props {
   frontmatter: CollectionEntry<"blogs">["data"];
@@ -38,7 +39,7 @@ const { frontmatter } = Astro.props;
         }
         {
           frontmatter.cover && (
-            <img src={frontmatter.cover.url} alt={frontmatter.cover.alt} />
+            <Image src={frontmatter.cover.url} alt={frontmatter.cover.alt} />
           )
         }
         <slot />

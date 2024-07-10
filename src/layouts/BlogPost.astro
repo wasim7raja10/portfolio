@@ -30,8 +30,8 @@ const { frontmatter } = Astro.props;
         <div class="prose mx-auto md:prose-lg">
           <section>
             <h1>{frontmatter.title}</h1>
-            <div class="opacity-60 flex items-center gap-2">
-              <Icon name="uit:calender" class="text-secondary" size="18" />
+            <div class="flex items-center gap-2 text-base">
+              <Icon name="uit:calender" class="text-secondary" size="16" />
               {
                 frontmatter.updateDate ? (
                   <time datetime={frontmatter.updateDate.toISOString()}>

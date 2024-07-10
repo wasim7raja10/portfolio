@@ -11,9 +11,13 @@ const projects = await getCollection("projects");
     class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact"
   >
     {
-      projects.map((item, index) => (
-        <ProjectCard data={item.data} index={index} />
-      ))
+      projects
+        .sort(
+          (a, b) =>
+            new Date(b.data.startDate).getTime() -
+            new Date(a.data.startDate).getTime()
+        )
+        .map((item, index) => <ProjectCard data={item.data} index={index} />)
     }
   </ul>
 </SectionWrapper>

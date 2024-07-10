@@ -8,6 +8,14 @@ const experiences = await getCollection("experiences");
 
 <SectionWrapper sectionName="Experience">
   <ul class="timeline timeline-vertical timeline-compact timeline-snap-icon">
-    {experiences.map((item, i) => <ExperienceCard data={item.data} />)}
+    {
+      experiences
+        .sort(
+          (a, b) =>
+            new Date(b.data.startDate).getTime() -
+            new Date(a.data.startDate).getTime()
+        )
+        .map((item, i) => <ExperienceCard data={item.data} />)
+    }
   </ul>
 </SectionWrapper>

@@ -1,3 +1,5 @@
+
+// @ts-ignore
 import { defineConfig } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
@@ -97,138 +99,125 @@ export default defineConfig({
       {
         label: "Projects",
         name: "projects",
-        path: "src/shared/data",
-        ui: {
-          allowedActions: {
-            delete: false,
-            create: false,
-          },
-        },
-        match: {
-          include: "projects",
-        },
+        path: "src/content/projects",
         format: "json",
         fields: [
           {
-            label: "Projects",
-            name: "projects",
+            label: "Name",
+            name: "name",
+            type: "string",
+          },
+          {
             type: "object",
-            list: true,
-            ui: {
-              itemProps: (item) => {
-                // Field values are accessed by item?.<Field name>
-                return { label: item?.name };
-              },
-            },
+            name: "image",
+            label: "Image",
+            description: "The image used as the cover for the post",
             fields: [
               {
-                label: "Name",
-                name: "name",
-                type: "string",
-              },
-              {
-                label: "Image",
-                name: "image",
                 type: "image",
+                name: "url",
+                label: "URL",
+                description: "The URL of the image",
               },
               {
-                label: "Start Date",
-                name: "startDate",
-                type: "datetime",
-              },
-              {
-                label: "End Date",
-                name: "endDate",
-                type: "datetime",
-              },
-              {
-                label: "Description",
-                name: "description",
                 type: "string",
-                list: true,
-              },
-              {
-                label: "Skills",
-                name: "skills",
-                type: "string",
-                list: true,
-              },
-              {
-                label: "Live Url",
-                name: "liveUrl",
-                type: "string",
-              },
-              {
-                label: "Github Url",
-                name: "githubUrl",
-                type: "string",
+                name: "alt",
+                label: "Alt Text",
+                description: "The alt text of the image",
               },
             ],
+          },
+          {
+            label: "Start Date",
+            name: "startDate",
+            type: "datetime",
+          },
+          {
+            label: "End Date",
+            name: "endDate",
+            type: "datetime",
+          },
+          {
+            label: "Description",
+            name: "description",
+            type: "string",
+            list: true,
+          },
+          {
+            label: "Skills",
+            name: "skills",
+            type: "string",
+            list: true,
+          },
+          {
+            label: "Live Url",
+            name: "liveUrl",
+            type: "string",
+          },
+          {
+            label: "Github Url",
+            name: "githubUrl",
+            type: "string",
           },
         ],
       },
       {
         label: "Experiences",
         name: "experiences",
-        path: "src/shared/data",
-        ui: {
-          allowedActions: {
-            delete: false,
-            create: false,
-          },
-        },
-        match: {
-          include: "experiences",
-        },
+        path: "src/content/experiences",
         format: "json",
         fields: [
           {
-            label: "Experiences",
-            name: "experiences",
+            label: "Role",
+            name: "role",
+            type: "string",
+          },
+          {
+            label: "Company",
+            name: "company",
+            type: "string",
+          },
+          {
             type: "object",
-            list: true,
-            ui: {
-              itemProps: (item) => {
-                // Field values are accessed by item?.<Field name>
-                return {
-                  label: item?.company,
-                };
-              },
-            },
+            name: "image",
+            label: "Image",
+            description: "The image used as the cover for the post",
             fields: [
               {
-                label: "Role",
-                name: "role",
+                type: "image",
+                name: "url",
+                label: "URL",
+                description: "The URL of the image",
+              },
+              {
                 type: "string",
-              },
-              {
-                label: "Company",
-                name: "company",
-                type: "string",
-              },
-              {
-                label: "Start Date",
-                name: "startDate",
-                type: "datetime",
-              },
-              {
-                label: "End Date",
-                name: "endDate",
-                type: "datetime",
-              },
-              {
-                label: "Description",
-                name: "description",
-                type: "string",
-                list: true,
-              },
-              {
-                label: "Skills",
-                name: "skills",
-                type: "string",
-                list: true,
+                name: "alt",
+                label: "Alt Text",
+                description: "The alt text of the image",
               },
             ],
+          },
+          {
+            label: "Start Date",
+            name: "startDate",
+            type: "datetime",
+          },
+          {
+            label: "End Date",
+            name: "endDate",
+            type: "datetime",
+          },
+          {
+            label: "Description",
+            name: "description",
+            type: "string",
+            list: true,
+          },
+          {
+            label: "Skills",
+            name: "skills",
+            type: "string",
+            list: true,
           },
         ],
       },

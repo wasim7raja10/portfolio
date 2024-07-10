@@ -16,13 +16,17 @@ const { frontmatter } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={frontmatter.title} description={frontmatter.description} />
+    <BaseHead
+      title={frontmatter.title}
+      description={frontmatter.description}
+      image={frontmatter.cover.url.src}
+    />
   </head>
   <body>
     <Header />
-    <main>
-      <article>
-        <h1 class="title">{frontmatter.title}</h1>
+    <main class="container max-w-2xl">
+      <section>
+        <h1 class="text-2xl md:text-3xl font-medium">{frontmatter.title}</h1>
         {
           (
             <time datetime={frontmatter.pubDate.toISOString()}>
@@ -39,9 +43,12 @@ const { frontmatter } = Astro.props;
         }
         {
           frontmatter.cover && (
+            // @ts-ignore
             <Image src={frontmatter.cover.url} alt={frontmatter.cover.alt} />
           )
         }
+      </section>
+      <article>
         <slot />
       </article>
     </main>

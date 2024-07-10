@@ -75,6 +75,9 @@ importers:
         specifier: ^1.6.4
         version: 1.6.4(@babel/core@7.24.7)(@babel/template@7.24.7)(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
     devDependencies:
+      '@tailwindcss/typography':
+        specifier: ^0.5.13
+        version: 0.5.13(tailwindcss@3.3.3)
       daisyui:
         specifier: ^4.12.10
         version: 4.12.10(postcss@8.4.31)
@@ -2050,8 +2053,8 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
 
-  '@tailwindcss/typography@0.5.9':
-    resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
+  '@tailwindcss/typography@0.5.13':
+    resolution: {integrity: sha512-ADGcJ8dX21dVVHIwTRgzrcunY6YY9uSlAHHGVKvkA+vLc5qLwEszvKts40lx7z0qc4clpjclwLeK5rVCV2P/uw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
@@ -9101,7 +9104,7 @@ snapshots:
     dependencies:
       tailwindcss: 3.3.3
 
-  '@tailwindcss/typography@0.5.9(tailwindcss@3.3.3)':
+  '@tailwindcss/typography@0.5.13(tailwindcss@3.3.3)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
@@ -9176,7 +9179,7 @@ snapshots:
       '@svgr/core': 6.3.1
       '@tailwindcss/aspect-ratio': 0.4.2(tailwindcss@3.3.3)
       '@tailwindcss/line-clamp': 0.3.1(tailwindcss@3.3.3)
-      '@tailwindcss/typography': 0.5.9(tailwindcss@3.3.3)
+      '@tailwindcss/typography': 0.5.13(tailwindcss@3.3.3)
       '@tinacms/app': 1.2.42(@babel/core@7.24.7)(@babel/template@7.24.7)(@types/react-dom@18.2.7)(@types/react@18.2.20)(yup@0.32.11)
       '@tinacms/datalayer': 1.2.35(react@18.2.0)
       '@tinacms/graphql': 1.4.35(react@18.2.0)

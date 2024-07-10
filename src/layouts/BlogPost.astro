@@ -5,6 +5,7 @@ import Footer from "@/astro-components/Footer.astro";
 import type { CollectionEntry } from "astro:content";
 import { formatDateAsDayMonthYear } from "@/lib/utils";
 import { Image } from "astro:assets";
+import Icon from "astro-icon";
 
 interface Props {
   frontmatter: CollectionEntry<"blogs">["data"];
@@ -24,33 +25,41 @@ const { frontmatter } = Astro.props;
   </head>
   <body>
     <Header />
-    <main class="container max-w-2xl">
-      <section>
-        <h1 class="text-2xl md:text-3xl font-medium">{frontmatter.title}</h1>
-        {
-          (
-            <time datetime={frontmatter.pubDate.toISOString()}>
-              {formatDateAsDayMonthYear(frontmatter.pubDate)}
-            </time>
-          )
-        }
-        {
-          frontmatter.updateDate && (
-            <time datetime={frontmatter.updateDate.toISOString()}>
-              {formatDateAsDayMonthYear(frontmatter.updateDate)}
-            </time>
-          )
-        }
-        {
-          frontmatter.cover && (
-            // @ts-ignore
-            <Image src={frontmatter.cover.url} alt={frontmatter.cover.alt} />
-          )
-        }
-      </section>
-      <article>
-        <slot />
-      </article>
+    <main>
+      <div class="container">
+        <div class="prose mx-auto md:prose-lg">
+          <section>
+            <h1>{frontmatter.title}</h1>
+            <div class="opacity-60 flex items-center gap-2">
+              <Icon name="uit:calender" class="text-secondary" size="18" />
+              {
+                frontmatter.updateDate ? (
+                  <time datetime={frontmatter.updateDate.toISOString()}>
+                    {formatDateAsDayMonthYear(frontmatter.updateDate)}
+                  </time>
+                ) : (
+                  <time datetime={frontmatter.pubDate.toISOString()}>
+                    {formatDateAsDayMonthYear(frontmatter.pubDate)}
+                  </time>
+                )
+              }
+            </div>
+            {
+              frontmatter.cover && (
+                // @ts-ignore
+                <Image
+                  class="mt-4 md:mt-2"
+                  src={frontmatter.cover.url}
+                  alt={frontmatter.cover.alt}
+                />
+              )
+            }
+          </section>
+          <article>
+            <slot />
+          </article>
+        </div>
+      </div>
     </main>
     <Footer />
   </body>

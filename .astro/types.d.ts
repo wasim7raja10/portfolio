@@ -136,9 +136,9 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blogs": {
-"Test.md": {
-	id: "Test.md";
-  slug: "test";
+"Pick-Commits-from-One-Branch-to-Another-Using-git-cherry-pick.md": {
+	id: "Pick-Commits-from-One-Branch-to-Another-Using-git-cherry-pick.md";
+  slug: "pick-commits-from-one-branch-to-another-using-git-cherry-pick";
   body: string;
   collection: "blogs";
   data: InferEntrySchema<"blogs">
@@ -146,13 +146,6 @@ declare module 'astro:content' {
 "Tina-CMS.md": {
 	id: "Tina-CMS.md";
   slug: "tina-cms";
-  body: string;
-  collection: "blogs";
-  data: InferEntrySchema<"blogs">
-} & { render(): Render[".md"] };
-"select.md": {
-	id: "select.md";
-  slug: "select";
   body: string;
   collection: "blogs";
   data: InferEntrySchema<"blogs">

@@ -33,7 +33,12 @@ const isOdd = index % 2 !== 0;
     </div>
     <div class="card card-compact mx-auto max-w-sm bg-base-100 shadow-xl">
       <figure class="border-b">
-        <Image src={data.image.url} alt={data.image.alt} />
+        {
+          (
+            // @ts-ignore
+            <Image src={data.image.url} alt={data.image.alt} />
+          )
+        }
       </figure>
       <div class="card-body">
         <h2 class="text-lg font-medium">

@@ -1,16 +1,13 @@
 ---
+import { getCollection } from "astro:content";
 import ExperienceCard from "./ExperienceCard.astro";
 import SectionWrapper from "./SectionWrapper.astro";
 
-import { experienceData } from "@/shared/data";
+const experiences = await getCollection("experiences");
 ---
 
 <SectionWrapper sectionName="Experience">
   <ul class="timeline timeline-vertical timeline-compact timeline-snap-icon">
-    {
-      experienceData.experiences.map((item, i) => (
-        <ExperienceCard data={item} />
-      ))
-    }
+    {experiences.map((item, i) => <ExperienceCard data={item.data} />)}
   </ul>
 </SectionWrapper>

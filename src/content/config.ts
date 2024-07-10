@@ -33,8 +33,8 @@ const projectsCollection = defineCollection({
       skills: z.array(z.string()).optional(),
       liveUrl: z.string().optional(),
       githubUrl: z.string().optional(),
-      startDate: z.date(),
-      endDate: z.date().optional(),
+      startDate: z.string(),
+      endDate: z.string().optional(),
     }),
 });
 
@@ -51,8 +51,8 @@ const experiencesCollection = defineCollection({
           alt: z.string(),
         })
         .optional(),
-      startDate: z.date(),
-      endDate: z.date().optional(),
+      startDate: z.string(),
+      endDate: z.string().optional(),
       skills: z.array(z.string()).optional(),
     }),
 });

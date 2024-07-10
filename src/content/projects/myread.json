@@ -1,0 +1,12 @@
+{
+  "name": "My Read",
+  "startDate": "2022-11-06T18:30:00.000Z",
+  "endDate": "2022-12-02T18:30:00.000Z",
+  "description": [
+    "Check book information.",
+    "Add book from book database to the tracking list."
+  ],
+  "skills": ["CSS", "React"],
+  "liveUrl": "https://readtrack.netlify.app/",
+  "githubUrl": "https://github.com/wasim7raja10/nd0191-c1-myreads"
+}

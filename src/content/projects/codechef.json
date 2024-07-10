@@ -1,0 +1,12 @@
+{
+  "name": "CodeChef BCET Chapter Wep App",
+  "startDate": "2023-07-31T18:30:00.000Z",
+  "endDate": "2023-08-30T18:30:00.000Z",
+  "description": [
+    "Students can participate in events.",
+    "Aim of this web app was to help students find Resources, Events, etc."
+  ],
+  "skills": ["Tailwind", "React", "Firebase"],
+  "liveUrl": "https://codechefbcetchapter.netlify.app/",
+  "githubUrl": "https://github.com/CodeChef-BCET-Chapter/ccbcet-website"
+}

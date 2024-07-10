@@ -1,0 +1,11 @@
+{
+  "role": "Software Engineer",
+  "company": "Clearcals",
+  "startDate": "2022-07-14T18:30:00.000Z",
+  "endDate": "2099-12-31T18:30:00.000Z",
+  "description": [
+    "Ownership of a enterprise application which is a one-stop CRM solution for dieticians.",
+    "Ownership of a marketing website which includes product marketing information, blogs, etc."
+  ],
+  "skills": ["React", "RxJs", "Angular Material", "Angular", "Sass", "NgRx"]
+}

@@ -1,8 +1,9 @@
 ---
+import { getCollection } from "astro:content";
 import ProjectCard from "./ProjectCard.astro";
 import SectionWrapper from "./SectionWrapper.astro";
 
-import { projectData } from "@/shared/data";
+const projects = await getCollection("projects");
 ---
 
 <SectionWrapper sectionName="Projects">
@@ -10,8 +11,8 @@ import { projectData } from "@/shared/data";
     class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact"
   >
     {
-      projectData.projects.map((item, index) => (
-        <ProjectCard data={item} index={index} />
+      projects.map((item, index) => (
+        <ProjectCard data={item.data} index={index} />
       ))
     }
   </ul>

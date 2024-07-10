@@ -1,0 +1,21 @@
+{
+  "name": "Portfolio",
+  "image": {
+    "url": "/src/assets/images/projects/portfolio.png",
+    "alt": "Portfolio project homepage"
+  },
+  "startDate": "2023-07-31T18:30:00.000Z",
+  "endDate": "2023-08-30T18:30:00.000Z",
+  "description": [
+    "It contains all my projects, experiences.",
+    "List of blogs about various topics."
+  ],
+  "skills": [
+    "shadcn/ui",
+    "Astro",
+    "Tailwind",
+    "Tina CMS"
+  ],
+  "liveUrl": "https://wasimraja.netlify.app",
+  "githubUrl": "https://github.com/wasim7raja10/portfolio"
+}

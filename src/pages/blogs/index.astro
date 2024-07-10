@@ -8,13 +8,19 @@ const posts = await getCollection("blogs");
 
 <Base>
   <div class="container">
-    <ul class="max-w-xl mx-auto">
+    <ul class="mx-auto max-w-xl">
       {
-        posts.map((post) => (
-          <li>
-            <BlogCard post={post} />
-          </li>
-        ))
+        posts
+          .sort(
+            (a, b) =>
+              new Date(b.data.updateDate || b.data.pubDate).getTime() -
+              new Date(a.data.updateDate || a.data.pubDate).getTime()
+          )
+          .map((post) => (
+            <li>
+              <BlogCard post={post} />
+            </li>
+          ))
       }
     </ul>
   </div>

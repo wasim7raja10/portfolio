@@ -1,0 +1,11 @@
+{
+  "role": "Frontend Developer",
+  "company": "MyRevue",
+  "startDate": "2021-12-31T18:30:00.000Z",
+  "endDate": "2022-03-30T18:30:00.000Z",
+  "description": [
+    "Developed an analytics dashboard to track sponsorship, ad revenue, shipment of products.",
+    "Developed components like infinite scrollable short video player (like TikTok)."
+  ],
+  "skills": ["Firebase", "Tailwind", "Next.js", "React.js"]
+}

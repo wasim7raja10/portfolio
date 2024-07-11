@@ -35,7 +35,7 @@ This command will cherry-pick the specified commit and apply it to the current b
 
 Suppose you need to cherry-pick a range of commits:
 
-!\[Screenshot showing a list of git commits]\([https://assets.tina.io/a874d7b4-eea0-4616-8c82-1cc98efb2672/images/blog-posts/git](https://assets.tina.io/a874d7b4-eea0-4616-8c82-1cc98efb2672/images/blog-posts/git) commits.png)
+![Screenshot showing a list of git commits](</src/assets/images/blog-posts/git commits.png>)
 
 You don't have to cherry-pick each commit individually. You can cherry-pick all the commits in one go using the following command:
 

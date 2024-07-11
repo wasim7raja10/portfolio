@@ -8,4 +8,8 @@ cover:
   alt: 12 monkeys film poster
 ---
 
-This is a Test. Hi How are you? what up?
+Hi, I am posting this test blog using Tina CMS. 
+
+Tina CMS is a git based open source CMS. 
+
+Tina CMS is awesome. :) 

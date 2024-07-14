@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "tinacms dev -c 'astro dev'",
     "start": "tinacms build && astro dev",
+    "prebuild": "node scripts/replaceAssetPaths.js",
     "build": "tinacms build && astro build",
     "preview": "tinacms build && astro preview",
     "astro": "astro"

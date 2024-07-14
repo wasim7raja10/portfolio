@@ -10,12 +10,7 @@
     "It contains all my projects, experiences.",
     "List of blogs about various topics."
   ],
-  "skills": [
-    "shadcn/ui",
-    "Astro",
-    "Tailwind",
-    "Tina CMS"
-  ],
+  "skills": ["shadcn/ui", "Astro", "Tailwind", "Tina CMS"],
   "liveUrl": "https://wasimraja.netlify.app",
   "githubUrl": "https://github.com/wasim7raja10/portfolio"
 }

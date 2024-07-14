@@ -10,11 +10,7 @@
     "Students can participate in events.",
     "Aim of this web app was to help students find Resources, Events, etc."
   ],
-  "skills": [
-    "Tailwind",
-    "React",
-    "Firebase"
-  ],
+  "skills": ["Tailwind", "React", "Firebase"],
   "liveUrl": "https://codechefbcetchapter.netlify.app/",
   "githubUrl": "https://github.com/CodeChef-BCET-Chapter/ccbcet-website"
 }

@@ -15,9 +15,9 @@ Understanding the git cherry-pick command through a practical use case from my e
 
 ### Use Case
 
-You have been working on a branch *abc* and have pushed numerous commits to it. Now, you are working in a new branch *xyz*, which is a subset of *abc*, meaning there are a few files present in *abc* that you don't want in *xyz*. You need the exact same code changes in *xyz* that you made in *abc*. Remember that both branches are different and you don't intend to make it exactly same, so merging branch *abc* in *xyz* is out of question.
+You have been working on a branch _abc_ and have pushed numerous commits to it. Now, you are working in a new branch _xyz_, which is a subset of _abc_, meaning there are a few files present in _abc_ that you don't want in _xyz_. You need the exact same code changes in _xyz_ that you made in _abc_. Remember that both branches are different and you don't intend to make it exactly same, so merging branch _abc_ in _xyz_ is out of question.
 
-Instead of manually copying the changes, you can save time by using the git cherry-pick command to apply those commits from *abc* to *xyz*.
+Instead of manually copying the changes, you can save time by using the git cherry-pick command to apply those commits from _abc_ to _xyz_.
 
 Let's see how to do this.
 

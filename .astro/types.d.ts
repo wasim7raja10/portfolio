@@ -149,13 +149,6 @@ declare module "astro:content" {
         collection: "blogs";
         data: InferEntrySchema<"blogs">;
       } & { render(): Render[".md"] };
-      "Tina-CMS.md": {
-        id: "Tina-CMS.md";
-        slug: "tina-cms";
-        body: string;
-        collection: "blogs";
-        data: InferEntrySchema<"blogs">;
-      } & { render(): Render[".md"] };
     };
   };
 

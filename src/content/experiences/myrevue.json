@@ -7,11 +7,5 @@
     "Developed an analytics dashboard to track sponsorship, ad revenue, shipment of products.",
     "Developed components like infinite scrollable short video player (like TikTok)."
   ],
-  "skills": [
-    "Sanity CMS",
-    "Firebase",
-    "Tailwind",
-    "Next.js",
-    "React.js"
-  ]
+  "skills": ["Sanity CMS", "Firebase", "Tailwind", "Next.js", "React.js"]
 }

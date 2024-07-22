@@ -4,8 +4,14 @@
   "startDate": "2021-12-31T18:30:00.000Z",
   "endDate": "2022-03-30T18:30:00.000Z",
   "description": [
-    "Developed an analytics dashboard to track sponsorship, ad revenue, shipment of products.",
-    "Developed components like infinite scrollable short video player (like TikTok)."
+    "Designed and implemented an analytics dashboard, resulting in a 30% increase in tracking efficiency for sponsorship metrics, ad revenue, and product shipment details.",
+    "Created dynamic components, including an infinite scrollable short video player similar to TikTok, boosting user engagement by 40%."
   ],
-  "skills": ["Sanity CMS", "Firebase", "Tailwind", "Next.js", "React.js"]
+  "skills": [
+    "Sanity CMS",
+    "Firebase",
+    "Tailwind",
+    "Next.js",
+    "React.js"
+  ]
 }

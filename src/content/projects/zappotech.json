@@ -1,0 +1,17 @@
+{
+  "name": "zappotech",
+  "image": {
+    "url": "/src/assets/images/projects/screenshot-1729520620300.png",
+    "alt": "ZappoTech"
+  },
+  "startDate": "2023-12-31T18:30:00.000Z",
+  "endDate": "2024-08-30T18:30:00.000Z",
+  "skills": [
+    "Tailwind CSS",
+    "Supabase",
+    "Algolia",
+    "Next.js"
+  ],
+  "liveUrl": "https://zappotech.com/",
+  "githubUrl": "https://github.com/wasim7raja10/blog-next-sanity"
+}

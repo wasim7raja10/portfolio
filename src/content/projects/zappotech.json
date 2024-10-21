@@ -6,6 +6,10 @@
   },
   "startDate": "2023-12-31T18:30:00.000Z",
   "endDate": "2024-08-30T18:30:00.000Z",
+  "description": [
+    "ZappoTech is a full-stack platform built with Next.js and Supabase, featuring secure authentication, real-time updates via Sanity CMS, and fast content discovery through Algolia search.",
+    "With automated page revalidation and interactive features like liking and bookmarking, it enhances user engagement and delivers a smooth, scalable experience."
+  ],
   "skills": [
     "Tailwind CSS",
     "Supabase",

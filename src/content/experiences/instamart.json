@@ -1,0 +1,15 @@
+{
+  "role": "Software Engineer",
+  "company": "Instamart.ai",
+  "startDate": "2024-03-31T18:30:00.000Z",
+  "endDate": "2024-08-30T18:30:00.000Z",
+  "description": [
+    "Developed the frontend for an AI-powered chatbot and its admin dashboard.",
+    "The chatbot was designed to interact with users on the client’s website, while the admin dashboard provided a comprehensive interface for managing conversations, monitoring chatbot performance, and making adjustments to the chatbot’s responses."
+  ],
+  "skills": [
+    "Javascript",
+    "Tailwind CSS",
+    "React.js"
+  ]
+}
